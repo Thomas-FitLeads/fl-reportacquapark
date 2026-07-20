@@ -1,216 +1,391 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
+<html lang="it"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Report Campagne AcquaPark — Giugno 2026 · Google Ads</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<title>Report Campagne AcquaPark — Andamento dal Lancio · Google Ads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'DM Sans', Arial, sans-serif; background: #ffffff; color: #0A1628; font-size: 15px; line-height: 1.65; }
+  :root{
+    --ink:#0A2540; --muted:#5B6B7C; --bg:#EEF3F7; --card:#FFFFFF; --line:#E2E9F0;
+    --deep1:#0B3B5C; --deep2:#06283D; --aqua:#06B6D4; --aqua2:#0891B2; --teal:#14B8A6;
+    --pos:#15803D; --posbg:#E7F5EC; --neg:#C2410C; --negbg:#FBEBE2; --neutral:#334155;
+    --gold:#C99700; --gold-bg:#FBF3DA;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  a{color:var(--aqua2); text-decoration:none}
 
-.header { background: #0A1628; padding: 52px 60px 44px; }
-.header-label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 12px; }
-.header h1 { font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; color: #ffffff; line-height: 1.15; margin-bottom: 10px; }
-.header-sub { color: #8FA8C0; font-size: 14px; }
-.header-meta { margin-top: 28px; display: flex; gap: 32px; flex-wrap: wrap; }
-.meta-item { display: flex; flex-direction: column; gap: 3px; }
-.meta-item span:first-child { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FA8C0; }
-.meta-item span:last-child { font-size: 14px; color: #ffffff; font-weight: 500; }
+  /* ---------- Header ---------- */
+  header{
+    background:
+      radial-gradient(1200px 400px at 85% -20%, rgba(6,182,212,.35), transparent 60%),
+      linear-gradient(135deg,var(--deep1),var(--deep2));
+    color:#fff; padding:52px 0 46px; position:relative; overflow:hidden;
+  }
+  header::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
+    background:linear-gradient(90deg,var(--aqua),var(--teal));
+  }
+  .eyebrow{
+    font-size:12px; letter-spacing:.22em; text-transform:uppercase; font-weight:600;
+    color:#8FD9EA; margin:0 0 14px;
+  }
+  header h1{font-size:38px; line-height:1.1; font-weight:800; margin:0 0 8px; letter-spacing:-.02em}
+  header .sub{color:#BcD3E4; color:#B9D2E3; font-size:16px; margin:0 0 26px; font-weight:500}
+  .chips{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px}
+  .chip{
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16);
+    border-radius:10px; padding:10px 14px; backdrop-filter:blur(4px);
+  }
+  .chip .k{display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#7FB9D2; font-weight:600}
+  .chip .v{font-size:15px; font-weight:700; color:#fff}
+  .metaline{display:flex; flex-wrap:wrap; gap:28px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14)}
+  .metaline .k{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#7FB9D2; font-weight:600; margin-bottom:2px}
+  .metaline .v{font-size:15px; font-weight:600; color:#EAF4FA}
 
-.container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
-section { padding: 48px 0 0; }
-.section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 6px; }
-.section-title { font-family: 'DM Serif Display', Georgia, serif; font-size: 24px; font-weight: 700; color: #0A1628; margin-bottom: 24px; }
-.divider { height: 1px; background: #DDE8F0; margin: 40px 0 0; }
+  /* ---------- Sections ---------- */
+  section{padding:44px 0}
+  .sec-label{
+    font-size:12px; letter-spacing:.18em; text-transform:uppercase; font-weight:700;
+    color:var(--aqua2); margin:0 0 6px;
+  }
+  h2{font-size:26px; font-weight:800; margin:0 0 4px; letter-spacing:-.015em}
+  .lede{color:var(--muted); margin:0 0 24px; font-size:15px}
 
-.campaign-block { background: #F2F6FA; border-radius: 14px; overflow: hidden; margin-bottom: 32px; }
-.campaign-header { background: #1A3A5C; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-.campaign-name { font-size: 15px; font-weight: 600; color: #ffffff; }
-.campaign-badge { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: #2DBF7A; color: #ffffff; padding: 3px 10px; border-radius: 20px; }
-.campaign-note { padding: 12px 28px; font-size: 13px; color: #5A6E85; background: #ffffff; border-bottom: 1px solid #DDE8F0; }
-.note-warning { padding: 12px 20px; font-size: 13px; color: #7A5200; background: #FFF8EE; border-bottom: 1px solid #F5E0B0; }
+  .camp-head{display:flex; align-items:center; gap:12px; margin-bottom:18px; flex-wrap:wrap}
+  .camp-name{font-size:20px; font-weight:700; font-family:'Inter'; letter-spacing:-.01em}
+  .badge{
+    font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--pos); background:var(--posbg); padding:4px 10px; border-radius:999px;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .badge::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--pos)}
+  .badge.paused{color:var(--neg); background:var(--negbg)}
+  .badge.paused::before{background:var(--neg)}
 
-.compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-.compare-table th { padding: 12px 20px; text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FA8C0; font-weight: 500; border-bottom: 1px solid #DDE8F0; background: #ffffff; }
-.compare-table th:not(:first-child) { text-align: right; }
-.compare-table td { padding: 11px 20px; border-bottom: 1px solid #EEF3F8; color: #0A1628; }
-.compare-table td:not(:first-child) { text-align: right; }
-.compare-table tr:last-child td { border-bottom: none; }
-.metric-label { font-weight: 500; }
-.week-a { color: #8FA8C0; }
-.week-b { font-weight: 600; }
-.delta-pos { color: #2DBF7A; font-size: 12px; font-weight: 600; }
-.delta-neg { color: #E05C5C; font-size: 12px; font-weight: 600; }
-.delta-neu { color: #8FA8C0; font-size: 12px; }
-.roas-row td { background: rgba(91,184,212,0.07); }
-.roas-val { font-size: 16px !important; font-weight: 700 !important; color: #2A6BAD !important; }
-.roas-bad { font-size: 16px !important; font-weight: 700 !important; color: #E05C5C !important; }
+  /* ---------- Table ---------- */
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    box-shadow:0 1px 2px rgba(10,37,64,.04), 0 8px 24px rgba(10,37,64,.05); overflow:hidden;
+  }
+  table{width:100%; border-collapse:collapse; font-size:15px}
+  thead th{
+    text-align:right; font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; padding:16px 20px; background:#F7FAFC;
+    border-bottom:1px solid var(--line);
+  }
+  thead th:first-child{text-align:left}
+  tbody td{padding:13px 20px; border-bottom:1px solid var(--line); text-align:right; font-variant-numeric:tabular-nums}
+  tbody td:first-child{text-align:left; color:var(--muted); font-weight:500}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:nth-child(even){background:#FBFDFE}
+  .val{font-weight:700; color:var(--ink)}
+  .valB{font-weight:800; color:var(--ink)}
+  .delta{font-weight:700; font-size:14px; white-space:nowrap}
+  .up{color:var(--pos)} .down{color:var(--neg)} .flat{color:var(--neutral)}
+  .hero-row td{background:#F2FBFC !important}
+  .hero-row td:first-child{color:var(--ink); font-weight:700}
+  .footnote{font-size:12.5px; color:var(--muted); margin-top:12px; font-style:italic}
+  .chart-card{padding:22px 22px 10px; margin-bottom:22px}
+  .chart-card svg{width:100%; height:auto; display:block}
+  .legend{display:flex; flex-wrap:wrap; gap:18px; margin-bottom:6px}
+  .legend-item{display:flex; align-items:center; gap:7px; font-size:13px; color:var(--muted); font-weight:600}
+  .legend-dot{width:10px; height:10px; border-radius:50%; display:inline-block}
 
-.narrative { background: #ffffff; border-left: 3px solid #5BB8D4; padding: 24px 28px; border-radius: 0 10px 10px 0; margin-bottom: 28px; font-size: 14.5px; line-height: 1.75; color: #2A3A50; }
-.narrative h4 { font-family: 'DM Serif Display', Georgia, serif; font-size: 17px; color: #0A1628; margin-bottom: 10px; }
-.narrative p { margin-bottom: 10px; }
-.narrative p:last-child { margin-bottom: 0; }
-.narrative strong { color: #0A1628; font-weight: 600; }
+  /* ---------- Reading ---------- */
+  .reading{margin-top:22px}
+  .reading h3{
+    font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--aqua2);
+    font-weight:700; margin:0 0 10px;
+  }
+  .reading p{margin:0 0 12px; color:#2B3B4A; font-size:15.5px}
+  .reading p:last-child{margin-bottom:0}
+  .reading strong{color:var(--ink); font-weight:700}
 
-.creative-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 40px 0; width: 100%; }
-@media (max-width: 620px) { .creative-grid { grid-template-columns: 1fr; } }
-.creative-card { background: #ffffff; border: 1.5px solid #DDE8F0; border-radius: 12px; padding: 20px 22px 18px; display: block; position: relative; }
-.creative-card.top-card { border-color: #F5A623; background: #FFFDF5; }
-.creative-card.warn-card { border-color: #E05C5C; background: #FFF8F8; }
-.creative-flag { position: absolute; top: 16px; right: 18px; font-size: 11px; font-weight: 700; color: #F5A623; letter-spacing: 0.08em; }
-.creative-flag-num { position: absolute; top: 16px; right: 18px; font-size: 11px; font-weight: 700; color: #8FA8C0; }
-.creative-flag-warn { position: absolute; top: 16px; right: 18px; font-size: 11px; font-weight: 700; color: #E05C5C; }
-.creative-title { font-size: 13px; font-weight: 600; color: #1A3A5C; margin-bottom: 14px; padding-right: 70px; line-height: 1.4; }
-.creative-title span { display: block; font-weight: 400; color: #8FA8C0; margin-top: 2px; }
-.creative-stats { display: flex; flex-wrap: wrap; gap: 10px 20px; }
-.creative-stat { display: flex; flex-direction: column; gap: 2px; }
-.m-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #8FA8C0; }
-.m-val { font-size: 15px; font-weight: 700; color: #0A1628; }
-.m-val.hi { color: #2A6BAD; }
-.m-val.bad { color: #E05C5C; }
-.creative-note { margin-top: 14px; font-size: 12px; color: #5A6E85; line-height: 1.5; }
-.creative-note strong { color: #1A3A5C; font-weight: 700; }
+  /* ---------- Performance cards ---------- */
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  .pcard{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
+    box-shadow:0 8px 24px rgba(10,37,64,.05); position:relative; display:flex; flex-direction:column;
+  }
+  .pcard.top{border-color:#F0D98B; box-shadow:0 8px 28px rgba(201,151,0,.14)}
+  .pcard.paused{opacity:.82}
+  .rank{
+    display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700;
+    letter-spacing:.04em; text-transform:uppercase; color:var(--aqua2);
+    background:#E9F6FA; padding:5px 11px; border-radius:999px; align-self:flex-start; margin-bottom:14px;
+  }
+  .pcard.top .rank{color:var(--gold); background:var(--gold-bg)}
+  .pcard h4{font-size:16px; font-weight:700; margin:0 0 2px; letter-spacing:-.01em}
+  .pcard .grp-sub{font-size:13px; color:var(--muted); margin:0 0 16px}
+  .mini-table{width:100%; border-collapse:collapse; font-size:12.5px; margin-top:2px}
+  .mini-table th{text-align:right; color:var(--muted); font-weight:600; padding:5px 4px; border-bottom:1px solid var(--line); font-size:10.5px; text-transform:uppercase; letter-spacing:.03em}
+  .mini-table th:first-child{text-align:left}
+  .mini-table td{text-align:right; padding:6px 4px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums; font-weight:600; color:var(--ink)}
+  .mini-table td:first-child{text-align:left; color:var(--muted); font-weight:600}
+  .mini-table tr:last-child td{border-bottom:none}
+  .pcard .trend{margin-top:16px; padding-top:14px; border-top:1px solid var(--line); font-size:13.5px; color:#2B3B4A}
+  .pcard .trend b{color:var(--pos); font-weight:700}
+  .pcard.paused .trend b{color:var(--neg)}
 
-.comment-box { background: #0A1628; border-radius: 14px; padding: 36px 40px; margin: 40px 0 60px; }
-.comment-label { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 10px; }
-.comment-title { font-family: 'DM Serif Display', Georgia, serif; font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 20px; }
-.comment-body { color: #ffffff; font-size: 14.5px; line-height: 1.8; }
-.comment-body p { margin-bottom: 16px; }
-.comment-body strong { color: #5BB8D4; }
-.comment-body ul { list-style: none; margin: 20px 0 0; padding: 0; }
-.comment-body li { position: relative; padding-left: 22px; margin-bottom: 12px; color: #C7D6E5; }
-.comment-body li:last-child { margin-bottom: 0; }
-.comment-body li::before { content: '→'; position: absolute; left: 0; color: #5BB8D4; font-weight: 700; }
+  /* ---------- Final notes ---------- */
+  .notes .card{padding:30px}
+  .notes p{margin:0 0 14px; font-size:15.5px; color:#2B3B4A}
+  .notes p:last-child{margin-bottom:0}
+  .notes strong{color:var(--ink)}
+  .steps{list-style:none; margin:22px 0 0; padding:20px 0 0; border-top:1px solid var(--line)}
+  .steps li{position:relative; padding-left:30px; margin-bottom:12px; font-size:15px; color:#2B3B4A}
+  .steps li:last-child{margin-bottom:0}
+  .steps li::before{
+    content:""; position:absolute; left:0; top:8px; width:14px; height:14px; border-radius:4px;
+    background:linear-gradient(135deg,var(--aqua),var(--teal));
+  }
+  .steps b{color:var(--ink)}
 
-.footer { border-top: 1px solid #DDE8F0; padding: 24px 0; text-align: center; font-size: 12px; color: #8FA8C0; }
+  /* ---------- Footer ---------- */
+  footer{padding:34px 0 48px; text-align:center; color:var(--muted); font-size:13px}
+  footer .rule{height:1px; background:var(--line); max-width:960px; margin:0 auto 24px}
+
+  @media (max-width:760px){
+    header{padding:40px 0 36px}
+    header h1{font-size:29px}
+    .cards{grid-template-columns:1fr}
+    section{padding:34px 0}
+    h2{font-size:22px}
+    thead th,tbody td{padding:11px 14px; font-size:14px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+  @media print{
+    body{background:#fff}
+    header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .card,.pcard{box-shadow:none}
+    section{padding:24px 0}
+  }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="container">
-    <div class="header-label">Performance Report</div>
-    <h1>Campagne AcquaPark<br>Giugno 2026</h1>
-    <div class="header-sub">Analisi comparativa settimanale — Google Ads</div>
-    <div class="header-meta">
-      <div class="meta-item"><span>Settimana A</span><span>15 – 21 giu 2026</span></div>
-      <div class="meta-item"><span>Settimana B</span><span>22 – 28 giu 2026</span></div>
-      <div class="meta-item"><span>Account</span><span>Acqua1Village</span></div>
-      <div class="meta-item"><span>Campagna analizzata</span><span>Search_Mix_AcquaPark</span></div>
-      <div class="meta-item"><span>Struttura</span><span>3 gruppi di annunci</span></div>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Performance Report</p>
+    <h1>Campagne AcquaPark · Andamento dal Lancio</h1>
+    <p class="sub">Analisi settimanale dal lancio della campagna — Google Ads</p>
+    <div class="chips">
+      <div class="chip"><span class="k">Lancio campagna</span><span class="v">16 Giugno 2026</span></div>
+      <div class="chip"><span class="k">Ultimo dato</span><span class="v">12 Luglio 2026</span></div>
+      <div class="chip"><span class="k">Settimane analizzate</span><span class="v">4</span></div>
+    </div>
+    <div class="metaline">
+      <div><div class="k">Account</div><div class="v">Acqua1Village</div></div>
+      <div><div class="k">Campagna analizzata</div><div class="v">Search_Mix_AcquaPark</div></div>
+      <div><div class="k">Struttura</div><div class="v">3 gruppi di annunci</div></div>
     </div>
   </div>
-</div>
+</header>
 
-<div class="container">
+<!-- ============ CAMPAIGN OVERVIEW ============ -->
+<section>
+  <div class="wrap">
+    <p class="sec-label">Campagna 01</p>
+    <h2>Search_Mix_AcquaPark</h2>
+    <p class="lede">Andamento settimanale dal lancio — totali aggregati dei gruppi di annunci.</p>
 
-  <section>
-    <div class="section-label">Campagna 01</div>
-    <div class="section-title">Search_Mix_AcquaPark</div>
-    <div class="campaign-block">
-      <div class="campaign-header">
-        <span class="campaign-name">Search — Vendita biglietti online</span>
-        <span class="campaign-badge">ATTIVA</span>
-      </div>
-      <div class="campaign-note">Panoramica a livello di campagna — totali aggregati dei tre gruppi di annunci.</div>
-      <table class="compare-table">
-        <thead><tr><th>Metrica</th><th>Sett. A</th><th>Sett. B</th><th>Variazione</th></tr></thead>
+    <div class="camp-head">
+      <span class="camp-name">Search — Vendita biglietti online</span>
+      <span class="badge">Attiva</span>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr><th>Metrica</th><th>Sett. 1 (15–21 giu)*</th><th>Sett. 2 (22–28 giu)</th><th>Sett. 3 (29 giu–5 lug)</th><th>Sett. 4 (6–12 lug)</th><th>Var. Lancio→Oggi</th></tr>
+        </thead>
         <tbody>
-          <tr><td class="metric-label">Spesa</td><td class="week-a">€185,73</td><td class="week-b">€513,24</td><td class="delta-neu">↑ €327,51</td></tr>
-          <tr><td class="metric-label">Impressioni</td><td class="week-a">6.072</td><td class="week-b">14.250</td><td class="delta-pos">↑ 135%</td></tr>
-          <tr><td class="metric-label">Clic</td><td class="week-a">841</td><td class="week-b">4.547</td><td class="delta-pos">↑ 441%</td></tr>
-          <tr><td class="metric-label">CTR</td><td class="week-a">13,85%</td><td class="week-b">31,91%</td><td class="delta-pos">↑ 18,06pp</td></tr>
-          <tr><td class="metric-label">CPM</td><td class="week-a">€30,59</td><td class="week-b">€36,02</td><td class="delta-neu">↑ 18%</td></tr>
-          <tr><td class="metric-label">CPC medio</td><td class="week-a">€0,22</td><td class="week-b">€0,11</td><td class="delta-pos">↓ 49%</td></tr>
-          <tr><td class="metric-label">Tasso di conversione</td><td class="week-a">0,36%</td><td class="week-b">1,83%</td><td class="delta-pos">↑ 1,47pp</td></tr>
-          <tr><td class="metric-label">Acquisti</td><td class="week-a">3</td><td class="week-b">83</td><td class="delta-pos">↑ 2.667%</td></tr>
-          <tr><td class="metric-label">Costo per acquisto</td><td class="week-a">€61,91</td><td class="week-b">€6,18</td><td class="delta-pos">↓ 90%</td></tr>
-          <tr><td class="metric-label">Valore conversioni</td><td class="week-a">€148,75</td><td class="week-b">€4.242,59</td><td class="delta-pos">↑ 2.752%</td></tr>
-          <tr class="roas-row"><td class="metric-label">ROAS</td><td class="week-a">0,80x</td><td class="week-b"><span class="roas-val">8,27x</span></td><td class="delta-pos">↑ 934%</td></tr>
+          <tr><td>Spesa</td><td class="val">€185,73</td><td class="val">€513,24</td><td class="val">€436,30</td><td class="valB">€480,43</td><td class="delta flat">+€294,70</td></tr>
+          <tr><td>Impressioni</td><td class="val">6.072</td><td class="val">14.250</td><td class="val">11.033</td><td class="valB">9.068</td><td class="delta up">+49%</td></tr>
+          <tr><td>Clic</td><td class="val">841</td><td class="val">4.547</td><td class="val">3.261</td><td class="valB">2.464</td><td class="delta up">+193%</td></tr>
+          <tr><td>CTR</td><td class="val">13,85%</td><td class="val">31,91%</td><td class="val">29,56%</td><td class="valB">27,17%</td><td class="delta up">+13,32pp</td></tr>
+          <tr><td>CPM</td><td class="val">€30,58</td><td class="val">€36,02</td><td class="val">€39,55</td><td class="valB">€52,98</td><td class="delta down">+73%</td></tr>
+          <tr><td>CPC medio</td><td class="val">€0,22</td><td class="val">€0,11</td><td class="val">€0,13</td><td class="valB">€0,19</td><td class="delta up">−12%</td></tr>
+          <tr><td>Tasso di conversione</td><td class="val">0,84%</td><td class="val">2,26%</td><td class="val">2,47%</td><td class="valB">2,75%</td><td class="delta up">+1,91pp</td></tr>
+          <tr><td>Acquisti</td><td class="val">7</td><td class="val">103</td><td class="val">80</td><td class="valB">68</td><td class="delta up">+871%</td></tr>
+          <tr><td>Costo / acquisto</td><td class="val">€26,20</td><td class="val">€5,00</td><td class="val">€5,43</td><td class="valB">€7,08</td><td class="delta up">−73%</td></tr>
+          <tr><td>Valore conversioni</td><td class="val">€418,33</td><td class="val">€4.962,00</td><td class="val">€4.079,90</td><td class="valB">€3.175,97</td><td class="delta up">+659%</td></tr>
+          <tr class="hero-row"><td>ROAS</td><td class="val">2,25x</td><td class="val">9,67x</td><td class="val">9,35x</td><td class="valB">6,61x</td><td class="delta up">+194%</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="narrative">
-      <h4>Lettura della settimana</h4>
-      <p>Nella <strong>settimana A</strong> la campagna era ancora in piena fase di apprendimento: 6.072 impressioni e 841 clic hanno generato appena 3 acquisti, con un ROAS di 0,80x e un costo per acquisto di €61,91, sopra target. È il comportamento fisiologico di un account che sta accumulando i primi segnali di conversione: l'unico dato già solido era il <strong>CTR al 13,85%</strong>, che segnalava un buon allineamento tra annunci e intento di ricerca.</p>
-      <p>Nella <strong>settimana B</strong> il budget è stato aumentato dopo aver verificato l'arrivo delle prime conversioni, e la campagna ha risposto con forza. Gli acquisti sono passati da 3 a <strong>83</strong>, il ROAS è salito a <strong>8,27x</strong> e il costo per acquisto è crollato del 90%, a €6,18. Con lo storico conversioni ora disponibile, lo Smart Bidding ha ottimizzato in modo aggressivo: il tasso di conversione è passato dallo 0,36% all'1,83% e il CPC medio si è dimezzato, da €0,22 a €0,11. Il lieve rialzo del CPM (+18%) è fisiologico, legato alla maggiore pressione competitiva del weekend e all'aumento di budget.</p>
+    <p class="footnote">*Settimana 1 parziale: la campagna è partita il 16/06.</p>
+
+    <div class="reading">
+      <h3>Lettura dell'andamento</h3>
+      <p>Dal lancio la campagna ha avuto una crescita molto forte: il ROAS è passato da <strong>2,25x</strong> nella settimana di avvio a un picco di <strong>9,67x</strong> in settimana 2, restando sopra i target di 500% per tre settimane su quattro. Gli acquisti stimati sono passati da 7 a oltre 100 nel giro di una settimana, e il costo per acquisto è crollato da €26,20 a circa €5, segno che lo Smart Bidding ha rapidamente accumulato lo storico conversioni necessario per ottimizzare.</p>
+      <p>Nell'ultima settimana (6–12 lug) si osserva un raffreddamento: ROAS a 6,61x (comunque ben sopra target), impressioni e clic in calo (rispettivamente −18% e −24% rispetto alla sett. 3) e CPM in aumento del 34% nella sola ultima settimana. Come si vede nella sezione Competizione più sotto, questo coincide con un aumento marcato della pressione competitiva in asta, oltre alla pausa dell'ad group "Acquisto Biglietti Generico" (10/07) per liberare budget verso le keyword più performanti.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="divider"></div>
+<!-- ============ AD GROUP PERFORMANCE ============ -->
+<section style="background:linear-gradient(180deg,#E6EEF4,#EEF3F7)">
+  <div class="wrap">
+    <p class="sec-label">Ad Group Performance</p>
+    <h2>Andamento per gruppo di annunci</h2>
+    <p class="lede">I 3 gruppi, settimana per settimana dal lancio — ordinati per ROAS attuale (sett. 4).</p>
 
-  <section>
-    <div class="section-label">Ad Group Performance</div>
-    <div class="section-title">Performance per gruppo di annunci — Sett. B (22–28 giu)</div>
-    <div class="creative-grid">
-      <div class="creative-card top-card">
-        <div class="creative-flag">🏆 #1</div>
-        <div class="creative-title">Geo Localizzato<span>Intento per zona geografica</span></div>
-        <div class="creative-stats">
-          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">8,95x</span></div>
-          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">57</span></div>
-          <div class="creative-stat"><span class="m-label">Costo/acq.</span><span class="m-val">€5,45</span></div>
-          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">35,36%</span></div>
-          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€310,85</span></div>
-        </div>
-        <p class="creative-note">ROAS da 0,78x a <strong>8,95x</strong>. È il motore della campagna: 57 acquisti su 2.436 clic.</p>
+    <div class="cards">
+      <div class="pcard top">
+        <span class="rank">🏆 #1</span>
+        <h4>Geo Localizzato</h4>
+        <p class="grp-sub">Intento per zona geografica</p>
+        <table class="mini-table">
+          <thead><tr><th></th><th>Sett.1</th><th>Sett.2</th><th>Sett.3</th><th>Sett.4</th></tr></thead>
+          <tbody>
+            <tr><td>ROAS</td><td>1,63x</td><td>10,64x</td><td>9,98x</td><td>8,35x</td></tr>
+            <tr><td>Acquisti</td><td>2</td><td>69</td><td>55</td><td>54</td></tr>
+            <tr><td>Costo</td><td>€88</td><td>€311</td><td>€289</td><td>€304</td></tr>
+          </tbody>
+        </table>
+        <p class="trend">Dopo un avvio lento, è diventato il motore stabile della campagna: ROAS sopra <b>8x</b> nelle ultime tre settimane e 54 acquisti nell'ultima.</p>
       </div>
-      <div class="creative-card">
-        <div class="creative-flag-num">#2</div>
-        <div class="creative-title">Acquisto Biglietti Generico<span>Ricerche generiche di acquisto</span></div>
-        <div class="creative-stats">
-          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">7,80x</span></div>
-          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">10</span></div>
-          <div class="creative-stat"><span class="m-label">Costo/acq.</span><span class="m-val">€7,59</span></div>
-          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">22,88%</span></div>
-          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€75,89</span></div>
-        </div>
-        <p class="creative-note">Da <strong>0 a 10 acquisti</strong> rispetto alla sett. A. CPC più basso della campagna: €0,06.</p>
-      </div>
-      <div class="creative-card">
-        <div class="creative-flag-num">#3</div>
-        <div class="creative-title">Brand + AcquaPark<span>Ricerche di marca</span></div>
-        <div class="creative-stats">
-          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">6,86x</span></div>
-          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">16</span></div>
-          <div class="creative-stat"><span class="m-label">Costo/acq.</span><span class="m-val">€7,91</span></div>
-          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">44,12%</span></div>
-          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€126,50</span></div>
-        </div>
-        <p class="creative-note">ROAS da 1,90x a <strong>6,86x</strong>. CTR record (44%): traffico caldo di marca.</p>
-      </div>
-    </div>
-  </section>
 
-  <div class="divider"></div>
+      <div class="pcard">
+        <span class="rank">#2</span>
+        <h4>Brand + AcquaPark</h4>
+        <p class="grp-sub">Ricerche di marca</p>
+        <table class="mini-table">
+          <thead><tr><th></th><th>Sett.1</th><th>Sett.2</th><th>Sett.3</th><th>Sett.4</th></tr></thead>
+          <tbody>
+            <tr><td>ROAS</td><td>6,56x</td><td>7,87x</td><td>12,03x</td><td>5,66x</td></tr>
+            <tr><td>Acquisti</td><td>5</td><td>20</td><td>19</td><td>12</td></tr>
+            <tr><td>Costo</td><td>€42</td><td>€127</td><td>€88</td><td>€102</td></tr>
+          </tbody>
+        </table>
+        <p class="trend">Costante fin dal lancio, con un picco a <b>12,03x</b> in sett. 3; nell'ultima settimana si raffredda ma resta ampiamente sopra target.</p>
+      </div>
 
-  <section>
-    <div class="section-label">Note strategiche</div>
-    <div class="section-title">Commento finale</div>
-    <div class="comment-box">
-      <div class="comment-label">Osservazioni</div>
-      <div class="comment-title">Osservazioni e prossimi step</div>
-      <div class="comment-body">
-        <p>La <strong>Search AcquaPark</strong> ha completato la fase di apprendimento nell'arco di una sola settimana piena. Il passaggio da un ROAS inferiore all'unità (0,80x) a <strong>8,27x</strong> conferma che l'account ha raccolto i segnali di conversione necessari agli automatismi di Google: con lo storico ora disponibile, il bidding lavora in modo efficiente e il costo per acquisto è rientrato ampiamente sotto target.</p>
-        <p>A livello di gruppi di annunci, <strong>Geo Localizzato</strong> è il principale driver di volume e valore, con 57 acquisti e la quota di traffico più alta. Ha ancora ampio margine di espansione: la quota impressioni ricerca è salita dall'11% al 30%, quindi c'è spazio per scalare il budget mantenendo il ROAS. Il gruppo <strong>Generico</strong>, partito da zero conversioni, ora converte con il CPC più basso della campagna (€0,06): è la leva più efficiente su cui spingere. <strong>Brand + AcquaPark</strong> presidia la domanda di marca con un CTR del 44%, ma opera ancora al 52% di quota impressioni: alzando i bid sul brand è recuperabile traffico ad alta conversione.</p>
-        <ul>
-          <li><strong>Scalare Geo e Generico:</strong> aumentare gradualmente il budget sui due gruppi più efficienti, sfruttando la quota impressioni ancora disponibile.</li>
-          <li><strong>Consolidare lo storico conversioni</strong> per valutare il passaggio a "Massimizza valore conversione" con tROAS soft (~300%), come da piano di ottimizzazione in tre fasi.</li>
-          <li><strong>Attivare la Performance Max</strong> come amplificatore una volta stabilizzato il volume, per presidiare i canali su cui la Search non arriva.</li>
-          <li><strong>Proseguire la pulizia dei termini di ricerca</strong> sui gruppi Geo e Generico, per mantenere alta la qualità del traffico intercettato.</li>
-        </ul>
+      <div class="pcard paused">
+        <span class="rank">#3</span>
+        <h4>Acquisto Biglietti Generico</h4>
+        <p class="grp-sub">Ricerche generiche — <span class="badge paused">In pausa dal 10/07</span></p>
+        <table class="mini-table">
+          <thead><tr><th></th><th>Sett.1</th><th>Sett.2</th><th>Sett.3</th><th>Sett.4</th></tr></thead>
+          <tbody>
+            <tr><td>ROAS</td><td>0,00x</td><td>8,67x</td><td>2,23x</td><td>0,79x</td></tr>
+            <tr><td>Acquisti</td><td>0</td><td>13</td><td>6</td><td>1</td></tr>
+            <tr><td>Costo</td><td>€56</td><td>€76</td><td>€59</td><td>€74</td></tr>
+          </tbody>
+        </table>
+        <p class="trend">Dopo il picco di sett. 2 (8,67x) il ROAS è crollato; messo in pausa il <b>10/07</b> per spostare budget su Geo e Brand.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</div>
+<!-- ============ AUCTION INSIGHTS ============ -->
+<section>
+  <div class="wrap">
+    <p class="sec-label">Auction Insights</p>
+    <h2>Competizione in asta</h2>
+    <p class="lede">Quota impressioni per dominio, stesse 4 settimane dal lancio.</p>
 
-<div class="footer">
-  <div class="container">Report Google Ads per Acqua1Village — Giugno 2026. Dati estratti da Google Ads.</div>
-</div>
+    <div class="card chart-card">
+      <div class="legend">
+        <span class="legend-item"><span class="legend-dot" style="background:#0891B2"></span>Tu (Acqua1Village)</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#C2410C"></span>acquaticapark.it</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#5B6B7C"></span>inpiscina.it</span>
+      </div>
+      <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+        <line x1="50" y1="54" x2="680" y2="54" stroke="#E2E9F0" stroke-width="1"/>
+        <line x1="50" y1="123" x2="680" y2="123" stroke="#E2E9F0" stroke-width="1"/>
+        <line x1="50" y1="191" x2="680" y2="191" stroke="#E2E9F0" stroke-width="1"/>
+        <line x1="50" y1="260" x2="680" y2="260" stroke="#E2E9F0" stroke-width="1"/>
+        <text x="42" y="58" text-anchor="end" font-size="12" fill="#5B6B7C">30%</text>
+        <text x="42" y="127" text-anchor="end" font-size="12" fill="#5B6B7C">20%</text>
+        <text x="42" y="195" text-anchor="end" font-size="12" fill="#5B6B7C">10%</text>
+        <text x="42" y="264" text-anchor="end" font-size="12" fill="#5B6B7C">0%</text>
 
-</body>
-</html>
+        <polyline points="50,225.7 260,225.7 470,106.5 680,59.6" fill="none" stroke="#C2410C" stroke-width="2.5"/>
+        <polyline points="50,225.7 260,133.4 470,118.5 680,181.1" fill="none" stroke="#5B6B7C" stroke-width="2.5"/>
+        <polyline points="50,180.9 260,90.3 470,69.1 680,112.4" fill="none" stroke="#0891B2" stroke-width="3"/>
+
+        <g fill="#C2410C"><circle cx="50" cy="225.7" r="4"/><circle cx="260" cy="225.7" r="4"/><circle cx="470" cy="106.5" r="4"/><circle cx="680" cy="59.6" r="4"/></g>
+        <g fill="#5B6B7C"><circle cx="50" cy="225.7" r="4"/><circle cx="260" cy="133.4" r="4"/><circle cx="470" cy="118.5" r="4"/><circle cx="680" cy="181.1" r="4"/></g>
+        <g fill="#0891B2"><circle cx="50" cy="180.9" r="4"/><circle cx="260" cy="90.3" r="4"/><circle cx="470" cy="69.1" r="4"/><circle cx="680" cy="112.4" r="4"/></g>
+
+        <text x="700" y="63" text-anchor="end" font-size="12" font-weight="700" fill="#C2410C">29%</text>
+        <text x="700" y="185" text-anchor="end" font-size="12" font-weight="700" fill="#5B6B7C">12%</text>
+        <text x="700" y="117" text-anchor="end" font-size="12" font-weight="700" fill="#0891B2">22%</text>
+
+        <text x="50" y="285" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A2540">Sett. 1</text>
+        <text x="50" y="300" text-anchor="middle" font-size="11" fill="#5B6B7C">15–21 giu</text>
+        <text x="260" y="285" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A2540">Sett. 2</text>
+        <text x="260" y="300" text-anchor="middle" font-size="11" fill="#5B6B7C">22–28 giu</text>
+        <text x="470" y="285" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A2540">Sett. 3</text>
+        <text x="470" y="300" text-anchor="middle" font-size="11" fill="#5B6B7C">29 giu–5 lug</text>
+        <text x="680" y="285" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A2540">Sett. 4</text>
+        <text x="680" y="300" text-anchor="middle" font-size="11" fill="#5B6B7C">6–12 lug</text>
+      </svg>
+    </div>
+    <p class="footnote">Nel grafico i valori sotto il 10% (soglia minima riportata da Google, senza dato esatto) sono posizionati in modo approssimativo vicino alla soglia.</p>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr><th>Dominio</th><th>Sett. 1</th><th>Sett. 2</th><th>Sett. 3</th><th>Sett. 4</th><th>Trend</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hero-row"><td>Tu (Acqua1Village)</td><td class="val">12%</td><td class="val">25%</td><td class="val">28%</td><td class="valB">22%</td><td class="delta down">−21%</td></tr>
+          <tr><td>acquaticapark.it</td><td class="val">&lt;10%</td><td class="val">&lt;10%</td><td class="val">22%</td><td class="valB">29%</td><td class="delta down">forte crescita</td></tr>
+          <tr><td>inpiscina.it</td><td class="val">&lt;10%</td><td class="val">18%</td><td class="val">21%</td><td class="valB">12%</td><td class="delta up">in calo</td></tr>
+          <tr><td>acquaworld.it</td><td class="val">&lt;10%</td><td class="val">&lt;10%</td><td class="val">&lt;10%</td><td class="valB">&lt;10%</td><td class="delta flat">stabile</td></tr>
+          <tr><td>getyourguide.com</td><td class="val">&lt;10%</td><td class="val">&lt;10%</td><td class="val">&lt;10%</td><td class="valB">&lt;10%</td><td class="delta flat">stabile</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="reading">
+      <h3>Lettura della competizione</h3>
+      <p>La competizione in asta si è intensificata nell'ultima settimana, ma in modo concentrato su un solo attore: <strong>acquaticapark.it</strong>, che è passato da una quota impressioni sotto il 10% (settimane 1–2) al <strong>22%</strong> in settimana 3 fino al <strong>29%</strong> in settimana 4 — superando la nostra stessa quota impressioni (22%) e diventando il player più presente nell'asta. Nello stesso periodo <strong>inpiscina.it</strong> ha invece perso terreno (dal 21% al 12%), e acquaworld.it/getyourguide.com restano marginali per tutto il periodo (sempre sotto il 10%).</p>
+      <p>Questo spiega bene il calo di performance visto in settimana 4: l'aumento della quota impressioni persa per ranking (dall'8% al 19%, vedi tabella campagna) è quasi certamente legato all'ingresso più aggressivo di acquaticapark.it in asta, non a un problema di qualità dei nostri annunci.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL NOTES ============ -->
+<section class="notes">
+  <div class="wrap">
+    <p class="sec-label">Note strategiche</p>
+    <h2>Commento finale</h2>
+    <p class="lede">Osservazioni e prossimi step.</p>
+
+    <div class="card">
+      <p>Dal lancio del 16 giugno la <strong>Search AcquaPark</strong> ha mostrato una crescita molto solida: ROAS da 2,25x a un picco di 9,67x, costo per acquisto crollato del 73%. L'ultima settimana segna un rallentamento fisiologico, spiegato soprattutto dall'ingresso aggressivo di un nuovo competitor forte (acquaticapark.it) in asta, non da un problema di qualità del traffico. La campagna resta comunque ben sopra il target di ROAS (500%) e costantemente limitata dal budget: non ha senso in questa fase attivare Performance Max come canale aggiuntivo.</p>
+
+      <p>A livello di gruppi, <strong>Geo Localizzato</strong> è il motore stabile con ROAS sopra 8x da tre settimane. <strong>Brand + AcquaPark</strong> resta solido pur raffreddandosi nell'ultima settimana. <strong>Acquisto Biglietti Generico</strong> è stato messo in pausa il 10/07 dopo il crollo del ROAS a 0,79x, per concentrare budget sui due gruppi più efficienti.</p>
+
+      <ul class="steps">
+        <li><b>Aumentare il budget della Search fino a €2.000/mese:</b> il ROAS resta solido e la campagna è costantemente limitata dal budget.</li>
+        <li><b>Monitorare acquaticapark.it:</b> è il competitor che sta guadagnando più terreno (dal &lt;10% al 29% di quota impressioni in 4 settimane) — da tenere d'occhio nelle prossime rilevazioni aste.</li>
+        <li><b>Proseguire l'esclusione dei termini di ricerca</b> non pertinenti su Geo e Brand.</li>
+        <li><b>Proseguire con la strategia tROAS</b>, uscita ormai dalla fase di apprendimento e con performance molto buone.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="rule"></div>
+  Report Google Ads per Acqua1Village — Andamento dal lancio (16 Giu–12 Lug 2026). Dati estratti da Google Ads.
+</footer>
+
+
+
+</body></html>
