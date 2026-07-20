@@ -6,19 +6,28 @@
 <title>Report Campagne AcquaPark — Luglio 2026 · Meta Ads</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'DM Sans', Arial, sans-serif; background: #ffffff; color: #0A1628; font-size: 15px; line-height: 1.65; }
 
-.header { background: #0A1628; padding: 52px 60px 44px; text-align: center; }
-.header-label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 12px; }
-.header h1 { font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; color: #ffffff; line-height: 1.15; margin-bottom: 10px; }
-.header-sub { color: #8FA8C0; font-size: 14px; }
-.header-meta { margin-top: 28px; display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
-.meta-item { display: flex; flex-direction: column; gap: 3px; align-items: center; }
-.meta-item span:first-child { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FA8C0; }
-.meta-item span:last-child { font-size: 14px; color: #ffffff; font-weight: 500; }
+.header {
+  background:
+    radial-gradient(1200px 400px at 85% -20%, rgba(6,182,212,.35), transparent 60%),
+    linear-gradient(135deg, #0B3B5C, #06283D);
+  color: #ffffff; padding: 52px 0 46px; position: relative; overflow: hidden; text-align: left;
+}
+.header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, #06B6D4, #14B8A6); }
+.header-label { font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #8FD9EA; margin-bottom: 14px; }
+.header h1 { font-family: 'Inter', 'DM Sans', Arial, sans-serif; font-size: 38px; font-weight: 800; color: #ffffff; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 8px; }
+.header-sub { color: #B9D2E3; font-size: 16px; font-weight: 500; margin-bottom: 26px; }
+.header-meta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; margin-bottom: 26px; }
+.meta-item { display: flex; flex-direction: column; gap: 2px; align-items: flex-start; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 10px; padding: 10px 14px; }
+.meta-item span:first-child { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; }
+.meta-item span:last-child { font-size: 15px; color: #ffffff; font-weight: 700; }
+.header-metaline { display: flex; flex-wrap: wrap; gap: 28px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); }
+.header-metaline .k { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; margin-bottom: 2px; }
+.header-metaline .v { font-size: 15px; font-weight: 600; color: #EAF4FA; }
 
 .container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
 section { padding: 48px 0 0; }
@@ -87,13 +96,15 @@ section { padding: 48px 0 0; }
 <div class="header">
   <div class="container">
     <div class="header-label">Meta Ads Report</div>
-    <h1>AcquaPark — Performance Settimanale</h1>
-    <div class="header-sub">Confronto Settimana A vs Settimana B</div>
+    <h1>AcquaPark · Performance Settimanale</h1>
+    <div class="header-sub">Confronto Settimana A vs Settimana B — Meta Ads</div>
     <div class="header-meta">
       <div class="meta-item"><span>Settimana A</span><span>2 lug – 8 lug 2026</span></div>
       <div class="meta-item"><span>Settimana B</span><span>9 lug – 15 lug 2026</span></div>
-      <div class="meta-item"><span>Account</span><span>Acqua1Village</span></div>
-      <div class="meta-item"><span>Campagne analizzate</span><span>AP Novità / AP Ticket</span></div>
+    </div>
+    <div class="header-metaline">
+      <div><div class="k">Account</div><div class="v">Acqua1Village</div></div>
+      <div><div class="k">Campagne analizzate</div><div class="v">AP Novità / AP Ticket</div></div>
     </div>
   </div>
 </div>
