@@ -7,18 +7,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'DM Sans', Arial, sans-serif; background: #ffffff; color: #0A1628; font-size: 15px; line-height: 1.65; }
 
-.header { background: #0A1628; padding: 52px 60px 44px; }
-.header-label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 12px; }
-.header h1 { font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; color: #ffffff; line-height: 1.15; margin-bottom: 10px; }
-.header-sub { color: #8FA8C0; font-size: 14px; }
-.header-meta { margin-top: 28px; display: flex; gap: 32px; flex-wrap: wrap; }
-.meta-item { display: flex; flex-direction: column; gap: 3px; }
-.meta-item span:first-child { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FA8C0; }
-.meta-item span:last-child { font-size: 14px; color: #ffffff; font-weight: 500; }
+.report-header {
+  background:
+    radial-gradient(1200px 400px at 85% -20%, rgba(6,182,212,.35), transparent 60%),
+    linear-gradient(135deg,#0B3B5C,#06283D);
+  color: #fff; padding: 52px 0 46px; position: relative; overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.report-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg,#06B6D4,#14B8A6); }
+.eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; color: #8FD9EA; margin: 0 0 14px; }
+.report-header h1 { font-family: 'Inter', sans-serif; font-size: 38px; line-height: 1.1; font-weight: 800; margin: 0 0 8px; letter-spacing: -.02em; color: #ffffff; }
+.report-header .sub { color: #B9D2E3; font-size: 16px; margin: 0 0 26px; font-weight: 500; }
+.chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
+.chip { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 10px; padding: 10px 14px; backdrop-filter: blur(4px); }
+.chip .k { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; }
+.chip .v { font-size: 15px; font-weight: 700; color: #fff; }
+.metaline { display: flex; flex-wrap: wrap; gap: 28px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); }
+.metaline .k { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; margin-bottom: 2px; }
+.metaline .v { font-size: 15px; font-weight: 600; color: #EAF4FA; }
 
 .container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
 section { padding: 48px 0 0; }
@@ -84,17 +95,23 @@ section { padding: 48px 0 0; }
 </head>
 <body>
 
-<div class="header">
-  <div class="header-label">Report Settimanale · Meta Ads</div>
-  <h1>Campagne AcquaPark</h1>
-  <div class="header-sub">Confronto settimana su settimana — performance a livello campagna e creatività</div>
-  <div class="header-meta">
-    <div class="meta-item"><span>Settimana A</span><span>16–22 lug 2026</span></div>
-    <div class="meta-item"><span>Settimana B</span><span>23–29 lug 2026</span></div>
-    <div class="meta-item"><span>Account</span><span>Acqua1Village</span></div>
-    <div class="meta-item"><span>Campagne analizzate</span><span>AP Novità / AP Ticket</span></div>
+<header class="report-header">
+  <div class="container">
+    <p class="eyebrow">Report Settimanale · Meta Ads</p>
+    <h1>Campagne AcquaPark · Report Meta</h1>
+    <p class="sub">Confronto settimana su settimana — performance a livello campagna e creatività</p>
+    <div class="chips">
+      <div class="chip"><span class="k">Settimana A</span><span class="v">16–22 Luglio 2026</span></div>
+      <div class="chip"><span class="k">Settimana B</span><span class="v">23–29 Luglio 2026</span></div>
+      <div class="chip"><span class="k">Piattaforma</span><span class="v">Meta Ads</span></div>
+    </div>
+    <div class="metaline">
+      <div><div class="k">Account</div><div class="v">Acqua1Village</div></div>
+      <div><div class="k">Campagne analizzate</div><div class="v">AP Novità / AP Ticket</div></div>
+      <div><div class="k">Struttura</div><div class="v">2 campagne Sales</div></div>
+    </div>
   </div>
-</div>
+</header>
 
 <div class="container">
 
@@ -237,7 +254,9 @@ section { padding: 48px 0 0; }
     <div class="comment-label">Commento finale</div>
     <div class="comment-title">Note strategiche</div>
     <div class="comment-body">
-      <p><em style="color:#8FA8C0;">[ Sezione da completare — inserire qui le note strategiche. ]</em></p>
+      <p>Nell'ultima settimana il <strong>ROAS si è abbassato</strong> a causa di un video che, nel corso dei 7 giorni, ha speso tanto e portato pochi acquisti nonostante le buone metriche di advertising (<strong>CPM e CTR migliori rispetto alla media</strong>).</p>
+      <p>In <strong>entrambe le campagne</strong> stiamo continuando a spendere e ottenere un buon ritorno; dopo le ottimizzazioni verranno inserite anche delle <strong>creatività con messaggi contestualizzati col periodo</strong>.</p>
+      <p>L'obiettivo è ottenere un <strong>ROAS superiore a 5</strong> considerando entrambe le campagne.</p>
     </div>
   </div>
 
