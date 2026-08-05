@@ -7,18 +7,31 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'DM Sans', Arial, sans-serif; background: #ffffff; color: #0A1628; font-size: 15px; line-height: 1.65; }
+body { font-family: 'DM Sans', Arial, sans-serif; background: #ffffff; color: #0A1628; font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-.header { background: #0A1628; padding: 52px 60px 44px; }
-.header-label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 12px; }
-.header h1 { font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; color: #ffffff; line-height: 1.15; margin-bottom: 10px; }
-.header-sub { color: #8FA8C0; font-size: 14px; }
-.header-meta { margin-top: 28px; display: flex; gap: 32px; flex-wrap: wrap; }
-.meta-item { display: flex; flex-direction: column; gap: 3px; }
-.meta-item span:first-child { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FA8C0; }
-.meta-item span:last-child { font-size: 14px; color: #ffffff; font-weight: 500; }
+.report-header {
+  background:
+    radial-gradient(1200px 400px at 85% -20%, rgba(6,182,212,.35), transparent 60%),
+    linear-gradient(135deg,#0B3B5C,#06283D);
+  color: #fff; padding: 52px 0 46px; position: relative; overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  text-align: center;
+}
+.report-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg,#06B6D4,#14B8A6); }
+.report-header .container { max-width: 960px; padding: 0 20px; }
+.eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; color: #8FD9EA; margin: 0 0 14px; }
+.report-header h1 { font-family: 'Inter', sans-serif; font-size: 38px; line-height: 1.1; font-weight: 700; margin: 0 0 8px; letter-spacing: -.02em; color: #ffffff; }
+.report-header .sub { color: #B9D2E3; font-size: 16px; margin: 0 0 26px; font-weight: 500; }
+.chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; justify-content: center; }
+.chip { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 10px; padding: 10px 14px; backdrop-filter: blur(4px); }
+.chip .k { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; }
+.chip .v { font-size: 15px; font-weight: 700; color: #fff; }
+.metaline { display: flex; flex-wrap: wrap; gap: 28px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); justify-content: center; }
+.metaline .k { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; margin-bottom: 2px; }
+.metaline .v { font-size: 15px; font-weight: 600; color: #EAF4FA; }
 
 .container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
 section { padding: 48px 0 0; }
@@ -84,15 +97,21 @@ section { padding: 48px 0 0; }
 </head>
 <body>
 
-<header class="header">
-  <div class="header-label">Report Settimanale · Meta Ads</div>
-  <h1>Campagne AcquaPark · Report Meta</h1>
-  <p class="header-sub">Confronto settimana su settimana — performance a livello campagna e creatività</p>
-  <div class="header-meta">
-    <div class="meta-item"><span>Settimana A</span><span>23–29 Luglio 2026</span></div>
-    <div class="meta-item"><span>Settimana B</span><span>30 Luglio – 5 Agosto 2026</span></div>
-    <div class="meta-item"><span>Account</span><span>Acqua1Village</span></div>
-    <div class="meta-item"><span>Campagne analizzate</span><span>AP Novità / AP Ticket</span></div>
+<header class="report-header">
+  <div class="container">
+    <p class="eyebrow">Report Settimanale · Meta Ads</p>
+    <h1>Campagne AcquaPark · Report Meta</h1>
+    <p class="sub">Confronto settimana su settimana — performance a livello campagna e creatività</p>
+    <div class="chips">
+      <div class="chip"><span class="k">Settimana A</span><span class="v">23–29 Luglio 2026</span></div>
+      <div class="chip"><span class="k">Settimana B</span><span class="v">30 Luglio – 5 Agosto 2026</span></div>
+      <div class="chip"><span class="k">Piattaforma</span><span class="v">Meta Ads</span></div>
+    </div>
+    <div class="metaline">
+      <div><div class="k">Account</div><div class="v">Acqua1Village</div></div>
+      <div><div class="k">Campagne analizzate</div><div class="v">AP Novità / AP Ticket</div></div>
+      <div><div class="k">Struttura</div><div class="v">2 campagne Sales</div></div>
+    </div>
   </div>
 </header>
 
@@ -251,7 +270,7 @@ section { padding: 48px 0 0; }
         <p>Settimana chiaramente positiva su entrambi i fronti. Con <strong>€438,66 di spesa complessiva</strong> (−8,9% rispetto alla settimana precedente) l'account ha generato circa <strong>€3.372 di fatturato</strong> contro €2.298 — un <strong>ROAS aggregato di 7,69</strong>, in salita da 4,77.</p>
         <p>Gli <strong>acquisti totali passano da 54 a 80</strong> (+48%) e il costo per acquisto medio scende da €8,92 a €5,48. Il miglioramento non arriva da più budget, ma da creatività più efficaci: la nuova <strong>"27.07 AP Novità New 2"</strong> ha rilanciato la campagna Novità, mentre AP Ticket ha convertito un traffico più ristretto ma decisamente più caldo.</p>
         <p>Il tema da presidiare resta la <strong>copertura del pubblico</strong>: su AP Ticket la reach cala del 12% con frequenza in salita a 2,26. Il ROAS attuale è ottimo proprio perché stiamo lavorando sulla parte più calda dell'audience, ma quella riserva si consuma.</p>
-        <p><em style="color:#8FA8C0;">[ Sezione da completare — inserire qui le note strategiche. ]</em></p>
+        <p>Dopo aver speso male negli ultimi 10 giorni, con un <strong>refresh creativo e nuovi angle inseriti</strong>, entrambe le campagne sono tornate al ROAS desiderato. Sono già pronte varianti in caso dovessero calare.</p>
       </div>
     </div>
   </section>
