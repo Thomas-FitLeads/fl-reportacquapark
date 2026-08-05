@@ -3,34 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Report Campagne AcquaPark — Luglio 2026 · Meta Ads</title>
+<title>Report Campagne AcquaPark — Agosto 2026 · Meta Ads</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'DM Sans', Arial, sans-serif; background: #ffffff; color: #0A1628; font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: 'DM Sans', Arial, sans-serif; background: #ffffff; color: #0A1628; font-size: 15px; line-height: 1.65; }
 
-.report-header {
-  background:
-    radial-gradient(1200px 400px at 85% -20%, rgba(6,182,212,.35), transparent 60%),
-    linear-gradient(135deg,#0B3B5C,#06283D);
-  color: #fff; padding: 52px 0 46px; position: relative; overflow: hidden;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-}
-.report-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg,#06B6D4,#14B8A6); }
-.report-header .container { max-width: 960px; padding: 0 20px; }
-.eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; color: #8FD9EA; margin: 0 0 14px; }
-.report-header h1 { font-family: 'Inter', sans-serif; font-size: 38px; line-height: 1.1; font-weight: 700; margin: 0 0 8px; letter-spacing: -.02em; color: #ffffff; }
-.report-header .sub { color: #B9D2E3; font-size: 16px; margin: 0 0 26px; font-weight: 500; }
-.chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
-.chip { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 10px; padding: 10px 14px; backdrop-filter: blur(4px); }
-.chip .k { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; }
-.chip .v { font-size: 15px; font-weight: 700; color: #fff; }
-.metaline { display: flex; flex-wrap: wrap; gap: 28px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); }
-.metaline .k { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; margin-bottom: 2px; }
-.metaline .v { font-size: 15px; font-weight: 600; color: #EAF4FA; }
+.header { background: #0A1628; padding: 52px 60px 44px; }
+.header-label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 12px; }
+.header h1 { font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; color: #ffffff; line-height: 1.15; margin-bottom: 10px; }
+.header-sub { color: #8FA8C0; font-size: 14px; }
+.header-meta { margin-top: 28px; display: flex; gap: 32px; flex-wrap: wrap; }
+.meta-item { display: flex; flex-direction: column; gap: 3px; }
+.meta-item span:first-child { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FA8C0; }
+.meta-item span:last-child { font-size: 14px; color: #ffffff; font-weight: 500; }
 
 .container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
 section { padding: 48px 0 0; }
@@ -96,21 +84,15 @@ section { padding: 48px 0 0; }
 </head>
 <body>
 
-<header class="report-header">
-  <div class="container">
-    <p class="eyebrow">Report Settimanale · Meta Ads</p>
-    <h1>Campagne AcquaPark · Report Meta</h1>
-    <p class="sub">Confronto settimana su settimana — performance a livello campagna e creatività</p>
-    <div class="chips">
-      <div class="chip"><span class="k">Settimana A</span><span class="v">16–22 Luglio 2026</span></div>
-      <div class="chip"><span class="k">Settimana B</span><span class="v">23–29 Luglio 2026</span></div>
-      <div class="chip"><span class="k">Piattaforma</span><span class="v">Meta Ads</span></div>
-    </div>
-    <div class="metaline">
-      <div><div class="k">Account</div><div class="v">Acqua1Village</div></div>
-      <div><div class="k">Campagne analizzate</div><div class="v">AP Novità / AP Ticket</div></div>
-      <div><div class="k">Struttura</div><div class="v">2 campagne Sales</div></div>
-    </div>
+<header class="header">
+  <div class="header-label">Report Settimanale · Meta Ads</div>
+  <h1>Campagne AcquaPark · Report Meta</h1>
+  <p class="header-sub">Confronto settimana su settimana — performance a livello campagna e creatività</p>
+  <div class="header-meta">
+    <div class="meta-item"><span>Settimana A</span><span>23–29 Luglio 2026</span></div>
+    <div class="meta-item"><span>Settimana B</span><span>30 Luglio – 5 Agosto 2026</span></div>
+    <div class="meta-item"><span>Account</span><span>Acqua1Village</span></div>
+    <div class="meta-item"><span>Campagne analizzate</span><span>AP Novità / AP Ticket</span></div>
   </div>
 </header>
 
@@ -123,31 +105,32 @@ section { padding: 48px 0 0; }
     <div class="campaign-block">
       <div class="campaign-header">
         <span class="campaign-name">FL – Sales – AP Novità</span>
-        <span class="campaign-badge">ROAS 7,08</span>
+        <span class="campaign-badge">ROAS 11,07</span>
       </div>
       <table class="compare-table">
         <thead>
           <tr><th>Metrica</th><th>Sett. A</th><th>Sett. B</th><th>Δ</th></tr>
         </thead>
         <tbody>
-          <tr><td class="metric-label">Spesa</td><td class="week-a">€102,60</td><td class="week-b">€93,63</td><td class="delta-neu">−8,7%</td></tr>
-          <tr><td class="metric-label">Impression</td><td class="week-a">46.366</td><td class="week-b">42.018</td><td class="delta-neu">−9,4%</td></tr>
-          <tr><td class="metric-label">Reach</td><td class="week-a">20.620</td><td class="week-b">15.418</td><td class="delta-neg">−25,2%</td></tr>
-          <tr><td class="metric-label">Frequenza</td><td class="week-a">2,25</td><td class="week-b">2,73</td><td class="delta-neg">+21,3%</td></tr>
-          <tr><td class="metric-label">CTR</td><td class="week-a">1,91%</td><td class="week-b">1,48%</td><td class="delta-neg">−0,43pp</td></tr>
-          <tr><td class="metric-label">CPM</td><td class="week-a">€2,21</td><td class="week-b">€2,23</td><td class="delta-neu">+0,9%</td></tr>
-          <tr><td class="metric-label">CPC</td><td class="week-a">€0,12</td><td class="week-b">€0,15</td><td class="delta-neg">+25,0%</td></tr>
-          <tr><td class="metric-label">Acquisti</td><td class="week-a">18</td><td class="week-b">13</td><td class="delta-neg">−27,8%</td></tr>
-          <tr><td class="metric-label">Costo per acquisto</td><td class="week-a">€5,70</td><td class="week-b">€7,20</td><td class="delta-neg">+26,3%</td></tr>
-          <tr class="roas-row"><td class="metric-label">ROAS</td><td class="week-a">7,78</td><td class="roas-val">7,08</td><td class="delta-neg">−9,0%</td></tr>
+          <tr><td class="metric-label">Spesa</td><td class="week-a">€103,21</td><td class="week-b">€92,22</td><td class="delta-neu">−10,6%</td></tr>
+          <tr><td class="metric-label">Impression</td><td class="week-a">46.218</td><td class="week-b">39.526</td><td class="delta-neu">−14,5%</td></tr>
+          <tr><td class="metric-label">Reach</td><td class="week-a">16.476</td><td class="week-b">16.095</td><td class="delta-neu">−2,3%</td></tr>
+          <tr><td class="metric-label">Frequenza</td><td class="week-a">2,81</td><td class="week-b">2,46</td><td class="delta-pos">−12,5%</td></tr>
+          <tr><td class="metric-label">CTR</td><td class="week-a">1,49%</td><td class="week-b">1,71%</td><td class="delta-pos">+0,22pp</td></tr>
+          <tr><td class="metric-label">CPM</td><td class="week-a">€2,23</td><td class="week-b">€2,33</td><td class="delta-neu">+4,5%</td></tr>
+          <tr><td class="metric-label">CPC</td><td class="week-a">€0,15</td><td class="week-b">€0,14</td><td class="delta-pos">−6,7%</td></tr>
+          <tr><td class="metric-label">Acquisti</td><td class="week-a">18</td><td class="week-b">24</td><td class="delta-pos">+33,3%</td></tr>
+          <tr><td class="metric-label">Costo per acquisto</td><td class="week-a">€5,73</td><td class="week-b">€3,84</td><td class="delta-pos">−33,0%</td></tr>
+          <tr class="roas-row"><td class="metric-label">ROAS</td><td class="week-a">8,61</td><td class="roas-val">11,07</td><td class="delta-pos">+28,5%</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="narrative">
       <h4>Lettura della settimana</h4>
-      <p>La campagna <strong>AP Novità</strong> resta la più efficiente dell'account: il <strong>ROAS tiene a 7,08</strong> (da 7,78), nonostante una spesa ridotta e un volume più basso. La profittabilità per euro investito rimane elevata.</p>
-      <p>I segnali da monitorare arrivano dal fronte pubblico: la <strong>reach cala del 25%</strong> mentre la <strong>frequenza sale a 2,73</strong> — indizio di iniziale saturazione dell'audience. Di riflesso, CTR in flessione (1,48%), CPC in aumento (€0,15) e acquisti a 13 (da 18), con un CPA che sale a €7,20. Il motore funziona, ma chiede ossigeno di pubblico o rotazione creativa.</p>
+      <p>Settimana eccellente per <strong>AP Novità</strong>: il ROAS sale a <strong>11,07</strong> (da 8,61) spendendo l'11% in meno. Con €92,22 investiti la campagna ha generato circa <strong>€1.020 di fatturato</strong> contro gli €889 della settimana precedente — più ricavo con meno budget.</p>
+      <p>Il salto arriva da un'audience più fresca e da una creatività che funziona meglio: la <strong>frequenza scende a 2,46</strong> (era 2,81, la soglia di saturazione segnalata la scorsa settimana), il <strong>CTR risale a 1,71%</strong> e il CPC cala a €0,14. Gli acquisti passano da 18 a 24 e il <strong>costo per acquisto crolla a €3,84</strong> (−33%).</p>
+      <p>Il merito è quasi interamente della nuova creatività <strong>"27.07 AP Novità New 2"</strong>, entrata in rotazione a fine luglio: da sola porta 22 dei 24 acquisti. La rotazione creativa ha fatto esattamente quello che doveva fare.</p>
     </div>
   </section>
 
@@ -160,110 +143,120 @@ section { padding: 48px 0 0; }
     <div class="campaign-block">
       <div class="campaign-header">
         <span class="campaign-name">FL – Sales – AP Ticket</span>
-        <span class="campaign-badge">ROAS 3,40</span>
+        <span class="campaign-badge">ROAS 6,79</span>
       </div>
       <table class="compare-table">
         <thead>
           <tr><th>Metrica</th><th>Sett. A</th><th>Sett. B</th><th>Δ</th></tr>
         </thead>
         <tbody>
-          <tr><td class="metric-label">Spesa</td><td class="week-a">€380,67</td><td class="week-b">€334,30</td><td class="delta-neu">−12,2%</td></tr>
-          <tr><td class="metric-label">Impression</td><td class="week-a">169.460</td><td class="week-b">147.354</td><td class="delta-neu">−13,0%</td></tr>
-          <tr><td class="metric-label">Reach</td><td class="week-a">71.711</td><td class="week-b">73.361</td><td class="delta-pos">+2,3%</td></tr>
-          <tr><td class="metric-label">Frequenza</td><td class="week-a">2,36</td><td class="week-b">2,01</td><td class="delta-pos">−14,9%</td></tr>
-          <tr><td class="metric-label">CTR</td><td class="week-a">2,08%</td><td class="week-b">2,37%</td><td class="delta-pos">+0,29pp</td></tr>
-          <tr><td class="metric-label">CPM</td><td class="week-a">€2,25</td><td class="week-b">€2,27</td><td class="delta-neu">+0,9%</td></tr>
-          <tr><td class="metric-label">CPC</td><td class="week-a">€0,11</td><td class="week-b">€0,10</td><td class="delta-pos">−9,1%</td></tr>
-          <tr><td class="metric-label">Acquisti</td><td class="week-a">46</td><td class="week-b">28</td><td class="delta-neg">−39,1%</td></tr>
-          <tr><td class="metric-label">Costo per acquisto</td><td class="week-a">€8,28</td><td class="week-b">€11,94</td><td class="delta-neg">+44,2%</td></tr>
-          <tr class="roas-row"><td class="metric-label">ROAS</td><td class="week-a">6,17</td><td class="roas-bad">3,40</td><td class="delta-neg">−44,9%</td></tr>
+          <tr><td class="metric-label">Spesa</td><td class="week-a">€378,22</td><td class="week-b">€346,44</td><td class="delta-neu">−8,4%</td></tr>
+          <tr><td class="metric-label">Impression</td><td class="week-a">166.685</td><td class="week-b">151.546</td><td class="delta-neu">−9,1%</td></tr>
+          <tr><td class="metric-label">Reach</td><td class="week-a">76.572</td><td class="week-b">67.111</td><td class="delta-neu">−12,4%</td></tr>
+          <tr><td class="metric-label">Frequenza</td><td class="week-a">2,18</td><td class="week-b">2,26</td><td class="delta-neu">+3,7%</td></tr>
+          <tr><td class="metric-label">CTR</td><td class="week-a">2,29%</td><td class="week-b">1,90%</td><td class="delta-neg">−0,39pp</td></tr>
+          <tr><td class="metric-label">CPM</td><td class="week-a">€2,27</td><td class="week-b">€2,29</td><td class="delta-neu">+0,9%</td></tr>
+          <tr><td class="metric-label">CPC</td><td class="week-a">€0,10</td><td class="week-b">€0,12</td><td class="delta-neg">+20,0%</td></tr>
+          <tr><td class="metric-label">Acquisti</td><td class="week-a">36</td><td class="week-b">56</td><td class="delta-pos">+55,6%</td></tr>
+          <tr><td class="metric-label">Costo per acquisto</td><td class="week-a">€10,51</td><td class="week-b">€6,19</td><td class="delta-pos">−41,1%</td></tr>
+          <tr class="roas-row"><td class="metric-label">ROAS</td><td class="week-a">3,73</td><td class="roas-val">6,79</td><td class="delta-pos">+82,1%</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="narrative">
       <h4>Lettura della settimana</h4>
-      <p>La campagna <strong>AP Ticket</strong> è il motore di volume dell'account, ma questa settimana perde efficienza: il <strong>ROAS si dimezza a 3,40</strong> (da 6,17), con acquisti a 28 (da 46) e un CPA che sale a €11,94. Resta comunque una campagna in profitto.</p>
-      <p>Il dato di traffico è in realtà positivo — <strong>CTR in crescita a 2,37%</strong>, CPC in calo a €0,10 e frequenza più sana a 2,01 — quindi il collo di bottiglia è a valle, sulla conversione. Pesa la nuova creatività <strong>UGC 1</strong>, che ha assorbito la maggior parte del budget (€228,56) con un ROAS di soli 2,39, trascinando in basso la media della campagna.</p>
+      <p><strong>AP Ticket</strong> è la campagna che si è mossa di più: il <strong>ROAS quasi raddoppia</strong>, da 3,73 a 6,79 (+82%). Con €346 di spesa ha prodotto circa <strong>€2.351 di fatturato</strong>, contro €1.409 della settimana precedente — e con budget inferiore.</p>
+      <p>Il dato chiave sono gli <strong>acquisti: 56 contro 36</strong> (+56%), con un <strong>costo per acquisto sceso a €6,19</strong> da €10,51. Il traffico è meno abbondante ma molto più qualificato: CTR in calo a 1,90% e CPC a €0,12, eppure ogni clic converte molto meglio. Meno curiosi, più intenzione d'acquisto.</p>
+      <p>Segnale da tenere d'occhio: la reach cala del 12% e la <strong>frequenza sale a 2,26</strong>. Il pool di pubblico si sta stringendo attorno al segmento più caldo — ottimo per il ROAS di oggi, ma è il tipo di dinamica che chiede nuova creatività o allargamento del targeting nelle prossime settimane.</p>
     </div>
   </section>
 
   <div class="divider"></div>
 
   <section>
-    <div class="section-label">Creatività</div>
-    <div class="section-title">Creative Performance — Settimana B</div>
+    <div class="section-label">Creative Performance</div>
+    <div class="section-title">Le creatività della Settimana B</div>
 
     <div class="creative-grid">
 
-      <a class="creative-card top-card" href="https://business.facebook.com/ads/api/preview_iframe.php?d=AQJWpnDdkV5pwl1q7zHTWkJodgpXvMllW4vn5m__caWh-sRjIIA8nC7_oIJmo_5ng96-G0p6ZG7mdX7PXENCChUoyC85ETnn0HRVjkf1UjyhVSzlfe5ivZGO0jNtSfCPBr1M6zTpSRnT98aE3b8ihvYgLRhNR4qACnKE3HzOwIMSYW3MyMDTPzgbhOny-vHxg0Yz0cwvuvD0hsqrh3Ja2eYfZmMrEeXiI4mkJ5PNi-3S-Q&t=AQJEGkoPgIOBXigYedU" target="_blank" rel="noopener">
-        <span class="creative-flag">🏆 TOP</span>
-        <div class="creative-title">27.07 AP Novità New 2</div>
+      <div class="creative-card top-card">
+        <div class="creative-flag">🏆 TOP</div>
+        <div class="creative-title">27.07 AP Novità New 2<br><span style="font-weight:400;color:#8FA8C0;">AP Novità</span></div>
         <div class="creative-stats">
-          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">11,21</span></div>
-          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€21,42</span></div>
-          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">2</span></div>
-          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">1,94%</span></div>
-          <div class="creative-stat"><span class="m-label">CPA</span><span class="m-val">€10,71</span></div>
+          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">11,11</span></div>
+          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€83,18</span></div>
+          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">22</span></div>
+          <div class="creative-stat"><span class="m-label">CPA</span><span class="m-val">€3,78</span></div>
+          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">1,72%</span></div>
         </div>
-        <span class="creative-link">Vedi anteprima →</span>
-      </a>
+        <a class="creative-link" href="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKkVNtkyhzvfmVM3eJjlINT6_j63Y0Za4DszoCxd1h6oiH6MltrVtgbrFXgrfBLOAzmNHH52uIXPkov3PqiKP38AgC7d9dnbdigm_57UmvsWG6oJYS6c1N58Y0QkEFIuU0LQpvavcARJpfWgZofpD8Z4BnY09VYaUqq46FEc9bgFG1AFh_MhTA1MfMju9W3cbKJfdxx1gFWK11GAiMM1C64s8LCeQEABP_19VIV9XsuNA&amp;t=AQJCWANNJgdgdKYWsrA" target="_blank" rel="noopener">Vedi anteprima →</a>
+      </div>
 
-      <a class="creative-card" href="https://business.facebook.com/ads/api/preview_iframe.php?d=AQJ9FwL3FQFJws0srzCZgBoL6ahTO-iW_NaCDvi5tnprZc094g8q02CYBOC6IcbKVJOLH8fvPaBo5zwjTufX1Er92Y3uf_vM_PTaqikOT9SlPQX3HdlSd_U8T8PZAA5NHKrqd2hK-gjJqlsgqM8BR756DxvOI08j3chjgzwu8bubSCYRroLtFI6xaB9Ed-H9pLfhM4Ig5zV4dtyML165r_PKaZqEjOui9GM-XjfHq75LPA&t=AQIaASoV3YwzhYmb4iI" target="_blank" rel="noopener">
-        <span class="creative-flag-num">#2</span>
-        <div class="creative-title">22.07 AP Novità V2.1 - List</div>
+      <div class="creative-card">
+        <div class="creative-flag-num">#2</div>
+        <div class="creative-title">29.07 AP Sales – TOF Split V2<br><span style="font-weight:400;color:#8FA8C0;">AP Ticket</span></div>
         <div class="creative-stats">
-          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">6,03</span></div>
-          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€51,19</span></div>
-          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">7</span></div>
-          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">1,17%</span></div>
-          <div class="creative-stat"><span class="m-label">CPA</span><span class="m-val">€7,31</span></div>
+          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">7,44</span></div>
+          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€37,21</span></div>
+          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">9</span></div>
+          <div class="creative-stat"><span class="m-label">CPA</span><span class="m-val">€4,13</span></div>
+          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">1,62%</span></div>
         </div>
-        <span class="creative-link">Vedi anteprima →</span>
-      </a>
+        <a class="creative-link" href="https://business.facebook.com/ads/api/preview_iframe.php?d=AQJ8QBRLTydopq_J0xWYMR_3OXIDKv2xyHE7TwUwEPZdMBQ9vEXgtHbJcDq474trbCfBgIgw0-YRmDElGPP32c5Jb0UpQGxB9ejPAH81nWE4tCszgSh8mFeOegHaaIJ6_InMND8dWDQbtWjq2skOXv23KsJQHTQ_xoU0s975bzGylF7fdhEwjC56sR0kV-7yYlZ3_Mb3BogDofH60flaGlO_XASZoYYOFOVQwMJ-25t8VA&amp;t=AQIk2V6p35qRFQ_Q9LY" target="_blank" rel="noopener">Vedi anteprima →</a>
+      </div>
 
-      <a class="creative-card" href="https://business.facebook.com/ads/api/preview_iframe.php?d=AQK0bgHyYYp5yl9OA6W5EIUbnAMMAiCW68pogg4VCUnA1DcpCBstd0T0b0CTYgV-q-vnfyGUnuSBoBLC0sZxcCi-SPdW9zFyCbYttkHGJMx1HE0XPTNuTfrnwdOxthdgPrmDkbHoNRWJ-rx-cexN2CJ0GnbIB2Egt-QQ4OhSlQfom0ol_JBuxZbzMeDvxGPY8j_GDbLMlLT0H2PMEkuUDumevYfCxYJ4Urx6F859lpp6LA&t=AQJXmkyr-T6yupcdzjU" target="_blank" rel="noopener">
-        <span class="creative-flag-num">#3</span>
-        <div class="creative-title">15.07 AP Sales - Video TOF V4 Copy 2</div>
+      <div class="creative-card">
+        <div class="creative-flag-num">#3</div>
+        <div class="creative-title">15.07 AP Sales – Video TOF V4 Copy 2<br><span style="font-weight:400;color:#8FA8C0;">AP Ticket · motore di volume</span></div>
         <div class="creative-stats">
-          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">5,11</span></div>
-          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€95,11</span></div>
-          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">12</span></div>
-          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">1,88%</span></div>
-          <div class="creative-stat"><span class="m-label">CPA</span><span class="m-val">€7,93</span></div>
+          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val hi">6,44</span></div>
+          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€274,61</span></div>
+          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">43</span></div>
+          <div class="creative-stat"><span class="m-label">CPA</span><span class="m-val">€6,39</span></div>
+          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">1,93%</span></div>
         </div>
-        <span class="creative-link">Vedi anteprima →</span>
-      </a>
+        <a class="creative-link" href="https://business.facebook.com/ads/api/preview_iframe.php?d=AQIa5lcwnyFBTxQgcX4c3XnZzJi3Alr93Jjv1bi_bShChUpl9Kus4ihbl1y0_q4q1ezJpoY7G_0kB7P9HIihvJAtizwQ5KL7-JC_O0ArqVkNrbbcuNpyQf0OQDgoZxCH-SjqLcaAT-Pdq9gueHVTiHaJoV9CZ9ndZXMTDZUc2g19uIFbqgJ1hGXdHmVx81hDKLyiyg0eRk5CbED1mYXxpw7P2HcHOFeiajNMZOgw7oHlpg&amp;t=AQKf_s-MCZMajen_mk0" target="_blank" rel="noopener">Vedi anteprima →</a>
+      </div>
 
-      <a class="creative-card warn-card" href="https://business.facebook.com/ads/api/preview_iframe.php?d=AQINEGs5ehzsIcfIviNh0GD_kxoq7AiF8vZY5XJfwAL69AIK1qHDhMcy1glWh2YxL8_3G1UecXRfxq4SUpvUm1OjC-fM7FW_O7iiKkoTK05PO35SXhrAVGzBZPXKjYSxqCl7APs7PjpFcoDGMlbMr2nWlZjEQC5WwuHLyRfc6ccur0vto-YFmwlYEbfHODt1vPpfi0LbRwtKqykrwFlzCsLls2R0DhbTuVWOQaKbdvap5Q&t=AQJS_zOP04SOr1PvBrY" target="_blank" rel="noopener">
-        <span class="creative-flag-warn">DA VALUTARE</span>
-        <div class="creative-title">22.07 AP Sales - UGC 1</div>
+      <div class="creative-card warn-card">
+        <div class="creative-flag-warn">DA VALUTARE</div>
+        <div class="creative-title">25.06 AP Sales – Video TOF V2<br><span style="font-weight:400;color:#8FA8C0;">AP Ticket</span></div>
         <div class="creative-stats">
-          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val bad">2,39</span></div>
-          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€228,56</span></div>
-          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val">14</span></div>
-          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">2,55%</span></div>
-          <div class="creative-stat"><span class="m-label">CPA</span><span class="m-val">€16,33</span></div>
+          <div class="creative-stat"><span class="m-label">ROAS</span><span class="m-val bad">0,00</span></div>
+          <div class="creative-stat"><span class="m-label">Spesa</span><span class="m-val">€13,66</span></div>
+          <div class="creative-stat"><span class="m-label">Acquisti</span><span class="m-val bad">0</span></div>
+          <div class="creative-stat"><span class="m-label">CPA</span><span class="m-val bad">—</span></div>
+          <div class="creative-stat"><span class="m-label">CTR</span><span class="m-val">2,65%</span></div>
         </div>
-        <span class="creative-link">Vedi anteprima →</span>
-      </a>
+        <a class="creative-link" href="https://business.facebook.com/ads/api/preview_iframe.php?d=AQIHXnWrEZ6p1LjVFyufQvD7BxsSkpIqydeDjhtgnoDYjNDxfqjulakg-J7fF6_BY1LADxYlSgTq95t2WclnHhLDEHNVoUrCHaLEAGmXmE4MO6dZ2ZIZiMZXZOCWm67mvlo2g8zef0zBRfM0qm4Te_-N1V0dLfDaU1rxjxHnCVghcMS-8pxnu8kSkDaLbGTs8erk_2q89DnyreMWES-dJd1X-t_gklJ1xZgaBCoNTMKwAQ&amp;t=AQLjPgVtrXZojpe5u4A" target="_blank" rel="noopener">Vedi anteprima →</a>
+      </div>
 
+    </div>
+
+    <div class="narrative">
+      <h4>Nota di lettura</h4>
+      <p>Dalla classifica sono stati esclusi gli annunci con spesa residuale (sotto i €3) o con 1–2 acquisti isolati: producono ROAS statisticamente privi di significato. Il caso più evidente è <strong>"22.07 AP Novità V2.1 – List"</strong>, con €2,18 di spesa e un ROAS apparente di 44,26.</p>
+      <p>Il <strong>"25.06 Video TOF V2"</strong> è stato scelto come creatività da valutare perché ha spesa reale (€13,66) e il <strong>CTR più alto dell'account (2,65%)</strong>, ma zero acquisti: attira clic senza portare a conversione. Buon hook, promessa che non regge fino al checkout — caso da approfondire.</p>
     </div>
   </section>
 
-  <div class="comment-box">
-    <div class="comment-label">Commento finale</div>
-    <div class="comment-title">Note strategiche</div>
-    <div class="comment-body">
-      <p>Nell'ultima settimana il <strong>ROAS si è abbassato</strong> a causa di un video che, nel corso dei 7 giorni, ha speso tanto e portato pochi acquisti nonostante le buone metriche di advertising (<strong>CPM e CTR migliori rispetto alla media</strong>).</p>
-      <p>In <strong>entrambe le campagne</strong> stiamo continuando a spendere e ottenere un buon ritorno; dopo le ottimizzazioni verranno inserite anche delle <strong>creatività con messaggi contestualizzati col periodo</strong>.</p>
-      <p>L'obiettivo è ottenere un <strong>ROAS superiore a 5</strong> considerando entrambe le campagne.</p>
-    </div>
-  </div>
+  <div class="divider"></div>
 
-  <div class="footer">
-    Report generato da FitLeads per Acqua1Village — Luglio 2026. Dati estratti da Meta Ads Manager.
-  </div>
+  <section>
+    <div class="comment-box">
+      <div class="comment-label">Sintesi</div>
+      <div class="comment-title">Commento finale</div>
+      <div class="comment-body">
+        <p>Settimana chiaramente positiva su entrambi i fronti. Con <strong>€438,66 di spesa complessiva</strong> (−8,9% rispetto alla settimana precedente) l'account ha generato circa <strong>€3.372 di fatturato</strong> contro €2.298 — un <strong>ROAS aggregato di 7,69</strong>, in salita da 4,77.</p>
+        <p>Gli <strong>acquisti totali passano da 54 a 80</strong> (+48%) e il costo per acquisto medio scende da €8,91 a €5,48. Il miglioramento non arriva da più budget, ma da creatività più efficaci: la nuova <strong>"27.07 AP Novità New 2"</strong> ha rilanciato la campagna Novità, mentre AP Ticket ha convertito un traffico più ristretto ma decisamente più caldo.</p>
+        <p>Il tema da presidiare resta la <strong>copertura del pubblico</strong>: su AP Ticket la reach cala del 12% con frequenza in salita a 2,26. Il ROAS attuale è ottimo proprio perché stiamo lavorando sulla parte più calda dell'audience, ma quella riserva si consuma.</p>
+        <p><em style="color:#8FA8C0;">[ Sezione da completare — inserire qui le note strategiche. ]</em></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">Report generato da FitLeads per Acqua1Village — Agosto 2026. Dati estratti da Meta Ads Manager.</div>
 
 </div>
 
