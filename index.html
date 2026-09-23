@@ -3,14 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Report Campagne AcquaPark — Acqua1Village</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
-<style>
+<title>Report Campagne AcquaPark · Stagione 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: #ffffff; }
-body { font-family: 'DM Sans', Arial, sans-serif; color: #0A1628; }
+body {  color: #0A1628; }
 
 .tabbar {
   position: sticky; top: 0; z-index: 20;
@@ -20,7 +17,7 @@ body { font-family: 'DM Sans', Arial, sans-serif; color: #0A1628; }
   border-bottom: 1px solid #1E3350;
 }
 .chip {
-  font-family: 'DM Sans', Arial, sans-serif;
+  
   font-size: 13px; font-weight: 600; letter-spacing: 0.06em;
   padding: 9px 26px; border-radius: 24px;
   border: 1.5px solid #2A4A66; background: transparent; color: #8FA8C0;
@@ -32,24 +29,993 @@ body { font-family: 'DM Sans', Arial, sans-serif; color: #0A1628; }
 .frame-wrap { width: 100%; }
 iframe { width: 100%; border: none; display: block; }
 iframe.hidden { display: none; }
+
+/* Font unico del report */
+*, *::before, *::after {  }
+
+/* FONT UNICO: Inter, nessuna eccezione */
+*, *::before, *::after { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif !important; }
+.section-title, .narrative h4, .comment-title { font-weight: 800 !important; letter-spacing: -.015em; }
+.section-title { font-size: 26px !important; }
+.narrative h4 { font-size: 18px !important; }
+.comment-title { font-size: 24px !important; }
 </style>
 </head>
 <body>
 
 <div class="tabbar">
-  <button class="chip active" data-target="meta" id="chip-meta">Meta</button>
+  <button class="chip active" data-target="tot" id="chip-tot">Complessivo</button>
+  <button class="chip" data-target="meta" id="chip-meta">Meta</button>
   <button class="chip" data-target="google" id="chip-google">Google</button>
 </div>
 
 <div class="frame-wrap">
-  <iframe id="frame-meta" src="meta.html" title="Report Meta Ads" scrolling="no"></iframe>
-  <iframe id="frame-google" src="google.html" title="Report Google Ads" class="hidden" scrolling="no"></iframe>
+  <iframe id="frame-tot" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;it&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Report Campagne AcquaPark · Stagione 2026 · Complessivo&lt;/title&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;
+  :root{
+    --ink:#0A2540; --muted:#5B6B7C; --bg:#EEF3F7; --card:#FFFFFF; --line:#E2E9F0;
+    --deep1:#0B3B5C; --deep2:#06283D; --aqua:#06B6D4; --aqua2:#0891B2; --teal:#14B8A6;
+    --pos:#15803D; --posbg:#E7F5EC; --neg:#C2410C; --negbg:#FBEBE2; --neutral:#334155;
+    --gold:#C99700; --gold-bg:#FBF3DA;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; 
+    color:var(--ink); background:var(--bg); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  a{color:var(--aqua2); text-decoration:none}
+
+  /* ---------- Header ---------- */
+  header{
+    background:
+      radial-gradient(1200px 400px at 85% -20%, rgba(6,182,212,.35), transparent 60%),
+      linear-gradient(135deg,var(--deep1),var(--deep2));
+    color:#fff; padding:52px 0 46px; position:relative; overflow:hidden;
+  }
+  header::after{
+    content:&quot;&quot;; position:absolute; left:0; right:0; bottom:0; height:5px;
+    background:linear-gradient(90deg,var(--aqua),var(--teal));
+  }
+  .eyebrow{
+    font-size:12px; letter-spacing:.22em; text-transform:uppercase; font-weight:600;
+    color:#8FD9EA; margin:0 0 14px;
+  }
+  header h1{font-size:38px; line-height:1.1; font-weight:800; margin:0 0 8px; letter-spacing:-.02em}
+  header .sub{color:#BcD3E4; color:#B9D2E3; font-size:16px; margin:0 0 26px; font-weight:500}
+  .chips{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px}
+  .chip{
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16);
+    border-radius:10px; padding:10px 14px; backdrop-filter:blur(4px);
+  }
+  .chip .k{display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#7FB9D2; font-weight:600}
+  .chip .v{font-size:15px; font-weight:700; color:#fff}
+  .metaline{display:flex; flex-wrap:wrap; gap:28px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14)}
+  .metaline .k{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#7FB9D2; font-weight:600; margin-bottom:2px}
+  .metaline .v{font-size:15px; font-weight:600; color:#EAF4FA}
+
+  /* ---------- Sections ---------- */
+  section{padding:44px 0}
+  .sec-label{
+    font-size:12px; letter-spacing:.18em; text-transform:uppercase; font-weight:700;
+    color:var(--aqua2); margin:0 0 6px;
+  }
+  h2{font-size:26px; font-weight:800; margin:0 0 4px; letter-spacing:-.015em}
+  .lede{color:var(--muted); margin:0 0 24px; font-size:15px}
+
+  .camp-head{display:flex; align-items:center; gap:12px; margin-bottom:18px; flex-wrap:wrap}
+  .camp-name{font-size:20px; font-weight:700;  letter-spacing:-.01em}
+  .badge{
+    font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--pos); background:var(--posbg); padding:4px 10px; border-radius:999px;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .badge::before{content:&quot;&quot;; width:7px; height:7px; border-radius:50%; background:var(--pos)}
+  .badge.paused{color:var(--neg); background:var(--negbg)}
+  .badge.paused::before{background:var(--neg)}
+
+  /* ---------- Table ---------- */
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    box-shadow:0 1px 2px rgba(10,37,64,.04), 0 8px 24px rgba(10,37,64,.05); overflow:hidden;
+  }
+  table{width:100%; border-collapse:collapse; font-size:15px}
+  thead th{
+    text-align:right; font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; padding:16px 20px; background:#F7FAFC;
+    border-bottom:1px solid var(--line);
+  }
+  thead th:first-child{text-align:left}
+  tbody td{padding:13px 20px; border-bottom:1px solid var(--line); text-align:right; font-variant-numeric:tabular-nums}
+  tbody td:first-child{text-align:left; color:var(--muted); font-weight:500}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:nth-child(even){background:#FBFDFE}
+  .val{font-weight:700; color:var(--ink)}
+  .valB{font-weight:800; color:var(--ink)}
+  .delta{font-weight:700; font-size:14px; white-space:nowrap}
+  .up{color:var(--pos)} .down{color:var(--neg)} .flat{color:var(--neutral)}
+  .hero-row td{background:#F2FBFC !important}
+  .hero-row td:first-child{color:var(--ink); font-weight:700}
+  .footnote{font-size:12.5px; color:var(--muted); margin-top:12px; font-style:italic}
+  .chart-card{padding:22px 22px 10px; margin-bottom:22px}
+  .chart-card svg{width:100%; height:auto; display:block}
+  .legend{display:flex; flex-wrap:wrap; gap:18px; margin-bottom:6px}
+  .legend-item{display:flex; align-items:center; gap:7px; font-size:13px; color:var(--muted); font-weight:600}
+  .legend-dot{width:10px; height:10px; border-radius:50%; display:inline-block}
+
+  /* ---------- Reading ---------- */
+  .reading{margin-top:22px}
+  .reading h3{
+    font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--aqua2);
+    font-weight:700; margin:0 0 10px;
+  }
+  .reading p{margin:0 0 12px; color:#2B3B4A; font-size:15.5px}
+  .reading p:last-child{margin-bottom:0}
+  .reading strong{color:var(--ink); font-weight:700}
+
+  /* ---------- Performance cards ---------- */
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  .pcard{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
+    box-shadow:0 8px 24px rgba(10,37,64,.05); position:relative; display:flex; flex-direction:column;
+  }
+  .pcard.top{border-color:#F0D98B; box-shadow:0 8px 28px rgba(201,151,0,.14)}
+  .pcard.paused{opacity:.82}
+  .rank{
+    display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700;
+    letter-spacing:.04em; text-transform:uppercase; color:var(--aqua2);
+    background:#E9F6FA; padding:5px 11px; border-radius:999px; align-self:flex-start; margin-bottom:14px;
+  }
+  .pcard.top .rank{color:var(--gold); background:var(--gold-bg)}
+  .pcard h4{font-size:16px; font-weight:700; margin:0 0 2px; letter-spacing:-.01em}
+  .pcard .grp-sub{font-size:13px; color:var(--muted); margin:0 0 16px}
+  .mini-table{width:100%; border-collapse:collapse; font-size:11.5px; margin-top:2px}
+  .mini-table th{text-align:right; color:var(--muted); font-weight:600; padding:5px 3px; border-bottom:1px solid var(--line); font-size:9.5px; text-transform:uppercase; letter-spacing:.02em}
+  .mini-table th:first-child{text-align:left}
+  .mini-table td{text-align:right; padding:6px 3px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums; font-weight:600; color:var(--ink)}
+  .mini-table td:first-child{text-align:left; color:var(--muted); font-weight:600}
+  .mini-table tr:last-child td{border-bottom:none}
+  .pcard .trend{margin-top:16px; padding-top:14px; border-top:1px solid var(--line); font-size:13.5px; color:#2B3B4A}
+  .pcard .trend b{color:var(--pos); font-weight:700}
+  .pcard.paused .trend b{color:var(--neg)}
+
+  /* ---------- Final notes ---------- */
+  .notes .card{padding:30px}
+  .notes p{margin:0 0 14px; font-size:15.5px; color:#2B3B4A}
+  .notes p:last-child{margin-bottom:0}
+  .notes strong{color:var(--ink)}
+  .steps{list-style:none; margin:22px 0 0; padding:20px 0 0; border-top:1px solid var(--line)}
+  .steps li{position:relative; padding-left:30px; margin-bottom:12px; font-size:15px; color:#2B3B4A}
+  .steps li:last-child{margin-bottom:0}
+  .steps li::before{
+    content:&quot;&quot;; position:absolute; left:0; top:8px; width:14px; height:14px; border-radius:4px;
+    background:linear-gradient(135deg,var(--aqua),var(--teal));
+  }
+  .steps b{color:var(--ink)}
+
+  /* ---------- Footer ---------- */
+  footer{padding:34px 0 48px; text-align:center; color:var(--muted); font-size:13px}
+  footer .rule{height:1px; background:var(--line); max-width:960px; margin:0 auto 24px}
+
+  @media (max-width:760px){
+    header{padding:40px 0 36px}
+    header h1{font-size:29px}
+    .cards{grid-template-columns:1fr}
+    section{padding:34px 0}
+    h2{font-size:22px}
+    thead th,tbody td{padding:11px 14px; font-size:14px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+  @media print{
+    body{background:#fff}
+    header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .card,.pcard{box-shadow:none}
+    section{padding:24px 0}
+  }
+
+
+header{text-align:center}
+header .chips, header .metaline{justify-content:center}
+.table-scroll{overflow-x:auto}
+.kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:22px}
+.kpi{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px}
+.kpi .k{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700}
+.kpi .v{font-size:26px; font-weight:800; letter-spacing:-.02em; margin-top:4px}
+.kpi .s{font-size:13px; color:var(--muted); margin-top:2px}
+.tl{list-style:none; margin:0; padding:0; position:relative}
+.tl:before{content:&quot;&quot;; position:absolute; left:11px; top:6px; bottom:6px; width:2px; background:var(--line)}
+.tl li{position:relative; padding:0 0 26px 40px}
+.tl li:last-child{padding-bottom:0}
+.tl li:before{content:&quot;&quot;; position:absolute; left:4px; top:5px; width:16px; height:16px; border-radius:50%; background:#fff; border:3px solid var(--aqua)}
+.tl li.rep:before{background:var(--aqua)}
+.tl .when{font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--aqua2)}
+.tl .what{font-size:17px; font-weight:700; margin:2px 0 8px}
+.tl .box{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; font-size:15px; color:#2B3B4A}
+.tl .box p{margin:0 0 8px} .tl .box p:last-child{margin:0}
+.tl .lbl{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:2px 8px; border-radius:6px; margin-right:6px}
+.lbl.obs{background:#E9F6FA; color:var(--aqua2)} .lbl.dec{background:var(--gold-bg); color:var(--gold)} .lbl.res{background:var(--posbg); color:var(--pos)}
+.ch{font-size:12px; fill:#5B6B7C; }
+@media (max-width:760px){ .kpis{grid-template-columns:1fr 1fr} .kpi .v{font-size:21px} }
+
+
+/* Font unico del report */
+*, *::before, *::after {  }
+
+/* FONT UNICO: Inter, nessuna eccezione */
+*, *::before, *::after { font-family: &#x27;Inter&#x27;, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, Arial, sans-serif !important; }
+.section-title, .narrative h4, .comment-title { font-weight: 800 !important; letter-spacing: -.015em; }
+.section-title { font-size: 26px !important; }
+.narrative h4 { font-size: 18px !important; }
+.comment-title { font-size: 24px !important; }
+
+/* TITOLI DI SEZIONE: identici in tutte le tab */
+.section-label, .sec-label, .comment-label {
+  font-size: 12px !important; letter-spacing: .18em !important; text-transform: uppercase !important;
+  font-weight: 700 !important; color: #0891B2 !important; margin: 0 0 6px !important;
+}
+.section-title, h2, .comment-title {
+  font-size: 26px !important; font-weight: 800 !important; letter-spacing: -.015em !important;
+  line-height: 1.2 !important; margin: 0 0 6px !important;
+}
+.section-title, h2 { color: #0A2540 !important; }
+.comment-title { color: #ffffff !important; margin-bottom: 20px !important; }
+.lede { font-size: 15px !important; margin: 0 0 24px !important; }
+.narrative h4, .reading h3 {
+  font-size: 13px !important; letter-spacing: .1em !important; text-transform: uppercase !important;
+  font-weight: 700 !important; color: #0891B2 !important; margin: 0 0 10px !important;
+}
+.campaign-name, .camp-name { font-size: 16px !important; font-weight: 700 !important; letter-spacing: -.01em !important; }
+section { padding: 44px 0 !important; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;eyebrow&quot;&gt;Report di Stagione · Meta Ads + Google Ads&lt;/p&gt;
+    &lt;h1&gt;Campagne AcquaPark · Stagione 2026&lt;/h1&gt;
+    &lt;p class=&quot;sub&quot;&gt;Tutte le campagne e il ritorno sugli investimenti&lt;/p&gt;
+    &lt;div class=&quot;chips&quot;&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Periodo&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;Maggio – Agosto 2026&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Investimento&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;€10.593,30&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Valore attribuito&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;€65.722,60&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;6,20x&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;metaline&quot;&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Account&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;Acqua1Village&lt;/div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Canali&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;Meta Ads · Google Ads&lt;/div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Campagne&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;6 Meta · 1 Google&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+&lt;section&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Sintesi della stagione&lt;/p&gt;
+    &lt;h2&gt;Il ritorno sugli investimenti&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;Tutte le campagne AcquaPark su Meta Ads e Google Ads, da maggio ad agosto 2026.&lt;/p&gt;
+    &lt;div class=&quot;kpis&quot;&gt;
+ &lt;div class=&quot;kpi&quot;&gt;&lt;div class=&quot;k&quot;&gt;Investimento&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;€10.593&lt;/div&gt;&lt;div class=&quot;s&quot;&gt;Meta €6.449 · Google €4.144&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;kpi&quot;&gt;&lt;div class=&quot;k&quot;&gt;Valore attribuito&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;€65.723&lt;/div&gt;&lt;div class=&quot;s&quot;&gt;Meta €31.688 · Google €34.034&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;kpi&quot;&gt;&lt;div class=&quot;k&quot;&gt;Acquisti&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;1.486&lt;/div&gt;&lt;div class=&quot;s&quot;&gt;Meta 727 · Google 759&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;kpi&quot;&gt;&lt;div class=&quot;k&quot;&gt;ROAS complessivo&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;6,20x&lt;/div&gt;&lt;div class=&quot;s&quot;&gt;Meta 4,91x · Google 8,21x&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;card table-scroll&quot;&gt;&lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Metrica&lt;/th&gt;&lt;th&gt;Meta Ads&lt;/th&gt;&lt;th&gt;Google Ads&lt;/th&gt;&lt;th&gt;Totale&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Investimento&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€6.449,40&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4.143,90&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€10.593,30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acquisti&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;727&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;759&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;1.486&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Costo per acquisto&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€8,87&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€5,46&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€7,13&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Scontrino medio&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€43,59&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€44,84&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€44,23&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Valore attribuito&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€31.688,15&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€34.034,45&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€65.722,60&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Quota dell&#x27;investimento&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;60,9%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;39,1%&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;100%&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;hero-row&quot;&gt;&lt;td&gt;ROAS&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;4,91x&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;8,21x&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;6,20x&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;p class=&quot;footnote&quot;&gt;Ogni piattaforma attribuisce gli acquisti con il proprio modello: una persona che ha visto un annuncio Meta e poi ha cercato il parco su Google può essere conteggiata da entrambe. Il totale va quindi letto come valore massimo attribuito.&lt;/p&gt;
+    &lt;div class=&quot;reading&quot;&gt;
+      &lt;h3&gt;Lettura&lt;/h3&gt;
+      &lt;p&gt;Nella stagione 2026 abbiamo investito &lt;strong&gt;€10.593,30&lt;/strong&gt; in advertising e le piattaforme hanno attribuito &lt;strong&gt;€65.722,60&lt;/strong&gt; di vendite di biglietti online, con &lt;strong&gt;1.486 acquisti&lt;/strong&gt;: ogni euro investito ha generato in media &lt;strong&gt;€6,20&lt;/strong&gt; di valore.&lt;/p&gt;
+      &lt;p&gt;I due canali hanno avuto ruoli diversi. &lt;strong&gt;Meta&lt;/strong&gt; ha fatto conoscere il parco e le sue novità a un pubblico ampio e ha costruito la domanda, con campagne di vendita, raccolta contatti e notorietà. &lt;strong&gt;Google&lt;/strong&gt; ha raccolto quella domanda nel momento della ricerca, con un ROAS di 8,21x. Lo scontrino medio quasi identico sui due canali (€43,59 e €44,84) indica che i due canali hanno venduto biglietti di valore simile.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section style=&quot;background:linear-gradient(180deg,#E6EEF4,#EEF3F7)&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Andamento mensile&lt;/p&gt;
+    &lt;h2&gt;Mese per mese&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;Investimento e valore attribuito dei due canali. Maggio è pre-stagione, Google è attivo dal 15 giugno al 19 agosto.&lt;/p&gt;
+    &lt;div class=&quot;card chart-card&quot;&gt;
+      &lt;div class=&quot;legend&quot;&gt;&lt;span class=&quot;legend-item&quot;&gt;&lt;span class=&quot;legend-dot&quot; style=&quot;background:#94A3B8&quot;&gt;&lt;/span&gt;Investimento&lt;/span&gt;&lt;span class=&quot;legend-item&quot;&gt;&lt;span class=&quot;legend-dot&quot; style=&quot;background:#0891B2&quot;&gt;&lt;/span&gt;Valore attribuito&lt;/span&gt;&lt;/div&gt;
+      &lt;svg viewBox=&quot;0 0 700 300&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; aria-label=&quot;Investimento e valore attribuito per mese&quot;&gt;&lt;line x1=&quot;60&quot; x2=&quot;690&quot; y1=&quot;250&quot; y2=&quot;250&quot; stroke=&quot;#E2E9F0&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;52&quot; y=&quot;254&quot; text-anchor=&quot;end&quot;&gt;€0k&lt;/text&gt;&lt;line x1=&quot;60&quot; x2=&quot;690&quot; y1=&quot;198&quot; y2=&quot;198&quot; stroke=&quot;#E2E9F0&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;52&quot; y=&quot;202&quot; text-anchor=&quot;end&quot;&gt;€8k&lt;/text&gt;&lt;line x1=&quot;60&quot; x2=&quot;690&quot; y1=&quot;145&quot; y2=&quot;145&quot; stroke=&quot;#E2E9F0&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;52&quot; y=&quot;149&quot; text-anchor=&quot;end&quot;&gt;€16k&lt;/text&gt;&lt;line x1=&quot;60&quot; x2=&quot;690&quot; y1=&quot;92&quot; y2=&quot;92&quot; stroke=&quot;#E2E9F0&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;52&quot; y=&quot;96&quot; text-anchor=&quot;end&quot;&gt;€24k&lt;/text&gt;&lt;line x1=&quot;60&quot; x2=&quot;690&quot; y1=&quot;40&quot; y2=&quot;40&quot; stroke=&quot;#E2E9F0&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;52&quot; y=&quot;44&quot; text-anchor=&quot;end&quot;&gt;€32k&lt;/text&gt;&lt;rect x=&quot;89&quot; y=&quot;245&quot; width=&quot;44&quot; height=&quot;5&quot; rx=&quot;4&quot; fill=&quot;#94A3B8&quot;/&gt;&lt;rect x=&quot;145&quot; y=&quot;250&quot; width=&quot;44&quot; height=&quot;0&quot; rx=&quot;4&quot; fill=&quot;#0891B2&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;111&quot; y=&quot;239&quot; text-anchor=&quot;middle&quot;&gt;€702&lt;/text&gt;&lt;text class=&quot;ch&quot; x=&quot;167&quot; y=&quot;244&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:700;fill:#0A2540&quot;&gt;€33&lt;/text&gt;&lt;text class=&quot;ch&quot; x=&quot;139&quot; y=&quot;272&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:600&quot;&gt;Maggio&lt;/text&gt;&lt;rect x=&quot;246&quot; y=&quot;232&quot; width=&quot;44&quot; height=&quot;18&quot; rx=&quot;4&quot; fill=&quot;#94A3B8&quot;/&gt;&lt;rect x=&quot;302&quot; y=&quot;154&quot; width=&quot;44&quot; height=&quot;96&quot; rx=&quot;4&quot; fill=&quot;#0891B2&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;268&quot; y=&quot;226&quot; text-anchor=&quot;middle&quot;&gt;€2.807&lt;/text&gt;&lt;text class=&quot;ch&quot; x=&quot;324&quot; y=&quot;148&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:700;fill:#0A2540&quot;&gt;€14.688&lt;/text&gt;&lt;text class=&quot;ch&quot; x=&quot;296&quot; y=&quot;272&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:600&quot;&gt;Giugno&lt;/text&gt;&lt;rect x=&quot;404&quot; y=&quot;222&quot; width=&quot;44&quot; height=&quot;28&quot; rx=&quot;4&quot; fill=&quot;#94A3B8&quot;/&gt;&lt;rect x=&quot;460&quot; y=&quot;46&quot; width=&quot;44&quot; height=&quot;204&quot; rx=&quot;4&quot; fill=&quot;#0891B2&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;426&quot; y=&quot;216&quot; text-anchor=&quot;middle&quot;&gt;€4.293&lt;/text&gt;&lt;text class=&quot;ch&quot; x=&quot;482&quot; y=&quot;40&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:700;fill:#0A2540&quot;&gt;€31.075&lt;/text&gt;&lt;text class=&quot;ch&quot; x=&quot;454&quot; y=&quot;272&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:600&quot;&gt;Luglio&lt;/text&gt;&lt;rect x=&quot;561&quot; y=&quot;232&quot; width=&quot;44&quot; height=&quot;18&quot; rx=&quot;4&quot; fill=&quot;#94A3B8&quot;/&gt;&lt;rect x=&quot;617&quot; y=&quot;119&quot; width=&quot;44&quot; height=&quot;131&quot; rx=&quot;4&quot; fill=&quot;#0891B2&quot;/&gt;&lt;text class=&quot;ch&quot; x=&quot;583&quot; y=&quot;226&quot; text-anchor=&quot;middle&quot;&gt;€2.791&lt;/text&gt;&lt;text class=&quot;ch&quot; x=&quot;639&quot; y=&quot;113&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:700;fill:#0A2540&quot;&gt;€19.926&lt;/text&gt;&lt;text class=&quot;ch&quot; x=&quot;611&quot; y=&quot;272&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:600&quot;&gt;Agosto&lt;/text&gt;&lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card table-scroll&quot;&gt;&lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Mese&lt;/th&gt;&lt;th&gt;Spesa Meta&lt;/th&gt;&lt;th&gt;Spesa Google&lt;/th&gt;&lt;th&gt;Spesa totale&lt;/th&gt;&lt;th&gt;Acquisti&lt;/th&gt;&lt;th&gt;Valore&lt;/th&gt;&lt;th&gt;ROAS&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Maggio&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€701,61&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;–&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€701,61&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;1&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€33,48&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;0,05x&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Giugno&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€1.976,32&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€830,65&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€2.806,97&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;312&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€14.688,10&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;5,23x&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Luglio&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€2.200,82&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€2.092,63&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4.293,45&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;669&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€31.075,21&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;7,24x&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Agosto&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€1.570,65&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€1.220,62&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€2.791,27&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;504&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€19.925,82&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;7,14x&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;hero-row&quot;&gt;&lt;td&gt;Stagione&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€6.449,40&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€4.143,90&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€10.593,30&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;1.486&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€65.722,60&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;6,20x&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;div class=&quot;reading&quot;&gt;
+      &lt;h3&gt;Lettura dell&#x27;andamento&lt;/h3&gt;
+      &lt;p&gt;&lt;strong&gt;Maggio&lt;/strong&gt; è stato dedicato alla pre-stagione: raccolta contatti per le feste di compleanno e per la prevendita, senza campagne di vendita attive. A &lt;strong&gt;giugno&lt;/strong&gt; partono le vendite: il primo mese chiude con ROAS 5,23x, mentre campagne e creatività trovano il loro assetto.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Luglio&lt;/strong&gt; è il cuore della stagione: il mese di maggior investimento (€4.293) e di maggior valore (€31.075), con ROAS salito a &lt;strong&gt;7,24x&lt;/strong&gt;. &lt;strong&gt;Agosto&lt;/strong&gt; mantiene quasi la stessa resa (7,14x) con il 35% di investimento in meno: la macchina è diventata più efficiente man mano che la stagione avanzava.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Ripartizione per obiettivo&lt;/p&gt;
+    &lt;h2&gt;Dove è andato l&#x27;investimento&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;Le campagne raggruppate per il risultato che dovevano ottenere.&lt;/p&gt;
+    &lt;div class=&quot;cards&quot;&gt;
+      &lt;div class=&quot;pcard top&quot;&gt;&lt;span class=&quot;rank&quot;&gt;Vendite&lt;/span&gt;&lt;h4&gt;€9.081&lt;/h4&gt;&lt;p class=&quot;grp-sub&quot;&gt;AP Ticket, AP Novità, Google Search · 86% dell&#x27;investimento&lt;/p&gt;
+        &lt;table class=&quot;mini-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Valore&lt;/td&gt;&lt;td&gt;€64.212&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acquisti&lt;/td&gt;&lt;td&gt;1.447&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ROAS&lt;/td&gt;&lt;td&gt;7,07x&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+        &lt;div class=&quot;trend&quot;&gt;Il &lt;b&gt;98% del valore&lt;/b&gt; della stagione arriva da queste tre campagne.&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;pcard&quot;&gt;&lt;span class=&quot;rank&quot;&gt;Lead&lt;/span&gt;&lt;h4&gt;€1.320&lt;/h4&gt;&lt;p class=&quot;grp-sub&quot;&gt;Bday AP, Pre Sale · 12% dell&#x27;investimento&lt;/p&gt;
+        &lt;table class=&quot;mini-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Registrazioni feste&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Costo per registrazione&lt;/td&gt;&lt;td&gt;€10,77&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acquisti diretti&lt;/td&gt;&lt;td&gt;39&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+        &lt;div class=&quot;trend&quot;&gt;Iscrizioni alla prevendita &lt;b&gt;in verifica&lt;/b&gt;.&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;pcard&quot;&gt;&lt;span class=&quot;rank&quot;&gt;Notorietà e traffico&lt;/span&gt;&lt;h4&gt;€192&lt;/h4&gt;&lt;p class=&quot;grp-sub&quot;&gt;Awareness AP, Giornate Animazione · 2% dell&#x27;investimento&lt;/p&gt;
+        &lt;table class=&quot;mini-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Persone raggiunte&lt;/td&gt;&lt;td&gt;126.046&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Visite al profilo&lt;/td&gt;&lt;td&gt;1.992&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Clic&lt;/td&gt;&lt;td&gt;1.174&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+        &lt;div class=&quot;trend&quot;&gt;Supporto alle vendite con &lt;b&gt;meno del 2%&lt;/b&gt; del budget.&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section style=&quot;background:linear-gradient(180deg,#E6EEF4,#EEF3F7)&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Evoluzione della stagione&lt;/p&gt;
+    &lt;h2&gt;Come sono cambiate le campagne&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;Cosa abbiamo osservato nei report durante la stagione, cosa abbiamo deciso e cosa è successo dopo, verificato con i dati finali.&lt;/p&gt;
+    &lt;div class=&quot;card&quot; style=&quot;padding:28px 24px&quot;&gt;&lt;ul class=&quot;tl&quot;&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;Maggio&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Pre-stagione: feste di compleanno e prevendita&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Lancio delle campagne Bday AP (13 maggio) e Pre Sale (18 maggio) per raccogliere contatti prima dell&#x27;apertura.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl res&quot;&gt;Risultato&lt;/span&gt;90 registrazioni per le feste a €10,77 l&#x27;una, di cui 89 tra maggio e giugno, più 36 acquisti diretti.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;1 giugno&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Partono le vendite su Meta&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Lancio di AP Ticket con le prime creatività (All, TOF, TOF V2, Mockup).&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;Metà giugno&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Lancio di AP Novità e della campagna Google&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Il 16 giugno parte AP Novità, dedicata alle novità 2026 del parco. Dal 15 giugno è attiva la campagna Google Search con strategia ROAS target.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl res&quot;&gt;Risultato&lt;/span&gt;Google a regime già dalla seconda settimana: 10,60x nella settimana 22–28 giugno.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;rep&quot;&gt;&lt;div class=&quot;when&quot;&gt;Report del 25 giugno&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;AP Ticket in difficoltà&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Nella settimana 16–22 giugno AP Ticket scende a ROAS 1,18 con costo per acquisto triplicato: pubblico in saturazione. Il creativo 22.06 TOF V1 mostra il ROAS più alto dell&#x27;account.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl dec&quot;&gt;Deciso&lt;/span&gt;Rinnovare pubblico e creatività prima di aumentare il budget, e puntare su TOF V1.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl res&quot;&gt;Risultato&lt;/span&gt;Il nuovo 25.06 Video TOF V2 chiude la stagione con 96 acquisti e ROAS 6,55. TOF V1 chiude a ROAS 10,45. AP Ticket passa da 4,46 a giugno a 5,53 a luglio.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;10 luglio&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Pausa del gruppo Generico su Google&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Il gruppo con le ricerche generiche rende meno della metà dei gruppi Geo Localizzato e Brand: ROAS 4,62x a giugno contro 9,62x di Geo.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl dec&quot;&gt;Deciso&lt;/span&gt;Mettere in pausa il gruppo Acquisto Biglietti Generico e concentrare il budget su Geo Localizzato e Brand.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl res&quot;&gt;Risultato&lt;/span&gt;Luglio chiude a ROAS 8,29x, il miglior mese di Google, con un investimento due volte e mezzo quello di giugno.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;15 luglio&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Nuovo video principale su AP Ticket&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Lancio del 15.07 Video TOF V4 Copy 2.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl res&quot;&gt;Risultato&lt;/span&gt;Diventa la creatività più importante della stagione: €1.217 di spesa, 158 acquisti, ROAS 5,62.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;20–26 luglio&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;La settimana più competitiva&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Su Google il 44% delle impressioni va perso per ranking, con acquaticapark.it più aggressivo in asta: ROAS settimanale 5,39x, il più basso della stagione.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;27 luglio&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Nuova creatività su AP Novità&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Lancio del 27.07 AP Novità New 2.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl res&quot;&gt;Risultato&lt;/span&gt;È l&#x27;annuncio più efficiente dell&#x27;anno: 81 acquisti con €258 di spesa, ROAS 13,80.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;rep&quot;&gt;&lt;div class=&quot;when&quot;&gt;Report del 12 agosto&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Google: calo fisiologico e ripresa&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Nel periodo 29 giugno–2 agosto il calo di metà luglio è legato alla competizione. Nell&#x27;ultima settimana la quota impressioni sale al 45%.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl dec&quot;&gt;Deciso&lt;/span&gt;Mantenere la strategia tROAS, continuare a escludere le ricerche non pertinenti e monitorare i competitor.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl res&quot;&gt;Risultato&lt;/span&gt;Nelle prime due settimane di agosto la quota persa per ranking scende sotto il 10% e la quota impressioni arriva al 60%. La settimana 10–16 agosto chiude a 10,12x con 120 acquisti.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;11 agosto&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Rotazione creativa su AP Ticket&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Lancio del nuovo 11.08 Video TOF V5 Copy 3, per dare il cambio al V4 Copy 2 attivo dal 15 luglio.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;rep&quot;&gt;&lt;div class=&quot;when&quot;&gt;Report del 19 agosto&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Efficienza ai massimi di stagione&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;Nella settimana 13–19 agosto il V5 Copy 3 diventa il motore di AP Ticket. AP Novità tocca ROAS 15,11 con i primi segnali di saturazione del pubblico.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;lbl res&quot;&gt;Risultato&lt;/span&gt;Agosto è il miglior mese sia per AP Ticket (5,79) sia per AP Novità (10,32). Il V5 Copy 3 chiude a ROAS 6,75.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;when&quot;&gt;Fine agosto&lt;/div&gt;&lt;div class=&quot;what&quot;&gt;Chiusura della stagione di vendita online&lt;/div&gt;&lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;span class=&quot;lbl obs&quot;&gt;Osservato&lt;/span&gt;La campagna Google si ferma il 19 agosto, le campagne di vendita Meta chiudono entro fine mese. Ad agosto è attiva anche la promozione delle Giornate di Animazione, con 1.992 visite al profilo.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    &lt;p class=&quot;footnote&quot;&gt;I valori di Google citati nei report settimanali erano più bassi di quelli finali: Google Ads attribuisce una parte delle conversioni con alcuni giorni di ritardo.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;notes&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Prossima stagione&lt;/p&gt;
+    &lt;h2&gt;Cosa portiamo nel 2027&lt;/h2&gt;
+    &lt;div class=&quot;card&quot; style=&quot;margin-top:18px&quot;&gt;
+      &lt;p&gt;La stagione 2026 chiude con &lt;strong&gt;€65.723&lt;/strong&gt; di valore attribuito su &lt;strong&gt;€10.593&lt;/strong&gt; investiti. Più del risultato finale conta la direzione: le campagne hanno reso di più mese dopo mese, e le decisioni prese nei report settimanali si ritrovano nei numeri.&lt;/p&gt;
+      &lt;ul class=&quot;steps&quot;&gt;
+        &lt;li&gt;&lt;b&gt;Partire con Meta e Google insieme&lt;/b&gt; dall&#x27;apertura delle vendite: Google ha reso sopra 8x fin dal primo mese.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;Ripartire dal format Novità&lt;/b&gt;, il più efficiente della stagione, e verificare quanto regge con budget più alti.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;Pianificare le creatività in anticipo&lt;/b&gt;, con una nuova creatività principale ogni 3-4 settimane.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;Lavorare sul checkout della biglietteria&lt;/b&gt;: su AP Ticket 7 persone su 10 che avviano l&#x27;acquisto non lo completano.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;Preparare prima dell&#x27;avvio le esclusioni su Google&lt;/b&gt; per le ricerche generiche e i nomi di altri parchi.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;&lt;footer&gt;&lt;div class=&quot;rule&quot;&gt;&lt;/div&gt;Report generato da FitLeads per Acqua1Village · Stagione 2026. Dati estratti da Meta Ads Manager e Google Ads il 16/09/2026.&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Report complessivo" scrolling="no"></iframe>
+  <iframe id="frame-meta" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;it&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Report Campagne AcquaPark · Stagione 2026 · Meta Ads&lt;/title&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {  background: #ffffff; color: #0A1628; font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.report-header {
+  background:
+    radial-gradient(1200px 400px at 85% -20%, rgba(6,182,212,.35), transparent 60%),
+    linear-gradient(135deg,#0B3B5C,#06283D);
+  color: #fff; padding: 52px 0 46px; position: relative; overflow: hidden;
+  
+  text-align: center;
+}
+.report-header::after { content: &quot;&quot;; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg,#06B6D4,#14B8A6); }
+.report-header .container { max-width: 960px; padding: 0 20px; }
+.eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; color: #8FD9EA; margin: 0 0 14px; }
+.report-header h1 {  font-size: 38px; line-height: 1.1; font-weight: 700; margin: 0 0 8px; letter-spacing: -.02em; color: #ffffff; }
+.report-header .sub { color: #B9D2E3; font-size: 16px; margin: 0 0 26px; font-weight: 500; }
+.chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; justify-content: center; }
+.chip { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 10px; padding: 10px 14px; backdrop-filter: blur(4px); }
+.chip .k { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; }
+.chip .v { font-size: 15px; font-weight: 700; color: #fff; }
+.metaline { display: flex; flex-wrap: wrap; gap: 28px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); justify-content: center; }
+.metaline .k { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7FB9D2; font-weight: 600; margin-bottom: 2px; }
+.metaline .v { font-size: 15px; font-weight: 600; color: #EAF4FA; }
+
+.container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
+section { padding: 48px 0 0; }
+.section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 6px; }
+.section-title {  font-size: 24px; font-weight: 700; color: #0A1628; margin-bottom: 24px; }
+.divider { height: 1px; background: #DDE8F0; margin: 40px 0 0; }
+
+.campaign-block { background: #F2F6FA; border-radius: 14px; overflow: hidden; margin-bottom: 32px; }
+.campaign-header { background: #1A3A5C; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.campaign-name { font-size: 15px; font-weight: 600; color: #ffffff; }
+.campaign-badge { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: #2DBF7A; color: #ffffff; padding: 3px 10px; border-radius: 20px; }
+.note-warning { padding: 12px 20px; font-size: 13px; color: #7A5200; background: #FFF8EE; border-bottom: 1px solid #F5E0B0; }
+
+.compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.compare-table th { padding: 12px 20px; text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8FA8C0; font-weight: 500; border-bottom: 1px solid #DDE8F0; background: #ffffff; }
+.compare-table th:not(:first-child) { text-align: right; }
+.compare-table td { padding: 11px 20px; border-bottom: 1px solid #EEF3F8; color: #0A1628; }
+.compare-table td:not(:first-child) { text-align: right; }
+.compare-table tr:last-child td { border-bottom: none; }
+.metric-label { font-weight: 500; }
+.week-a { color: #8FA8C0; }
+.week-b { font-weight: 600; }
+.delta-pos { color: #2DBF7A; font-size: 12px; font-weight: 600; }
+.delta-neg { color: #E05C5C; font-size: 12px; font-weight: 600; }
+.delta-neu { color: #8FA8C0; font-size: 12px; }
+.roas-row td { background: rgba(91,184,212,0.07); }
+.roas-val { font-size: 16px !important; font-weight: 700 !important; color: #2A6BAD !important; }
+.roas-bad { font-size: 16px !important; font-weight: 700 !important; color: #E05C5C !important; }
+
+.narrative { background: #ffffff; border-left: 3px solid #5BB8D4; padding: 24px 28px; border-radius: 0 10px 10px 0; margin-bottom: 28px; font-size: 14.5px; line-height: 1.75; color: #2A3A50; }
+.narrative h4 {  font-size: 17px; color: #0A1628; margin-bottom: 10px; }
+.narrative p { margin-bottom: 10px; }
+.narrative p:last-child { margin-bottom: 0; }
+.narrative strong { color: #0A1628; font-weight: 600; }
+
+.creative-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 40px 0; width: 100%; }
+@media (max-width: 620px) { .creative-grid { grid-template-columns: 1fr; } }
+.creative-card { background: #ffffff; border: 1.5px solid #DDE8F0; border-radius: 12px; padding: 20px 22px 18px; display: block; position: relative; }
+.creative-card.top-card { border-color: #F5A623; background: #FFFDF5; }
+.creative-card.warn-card { border-color: #E05C5C; background: #FFF8F8; }
+.creative-flag { position: absolute; top: 16px; right: 18px; font-size: 11px; font-weight: 700; color: #F5A623; letter-spacing: 0.08em; }
+.creative-flag-num { position: absolute; top: 16px; right: 18px; font-size: 11px; font-weight: 700; color: #8FA8C0; }
+.creative-flag-warn { position: absolute; top: 16px; right: 18px; font-size: 11px; font-weight: 700; color: #E05C5C; }
+.creative-title { font-size: 13px; font-weight: 600; color: #1A3A5C; margin-bottom: 14px; padding-right: 70px; line-height: 1.4; }
+.creative-stats { display: flex; flex-wrap: wrap; gap: 10px 20px; }
+.creative-stat { display: flex; flex-direction: column; gap: 2px; }
+.m-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #8FA8C0; }
+.m-val { font-size: 15px; font-weight: 700; color: #0A1628; }
+.m-val.hi { color: #2A6BAD; }
+.m-val.bad { color: #E05C5C; }
+.creative-link { margin-top: 14px; display: inline-block; font-size: 12px; font-weight: 600; color: #2A6BAD; }
+
+.comment-box { background: #0A1628; border-radius: 14px; padding: 36px 40px; margin: 40px 0 60px; }
+.comment-label { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #5BB8D4; margin-bottom: 10px; }
+.comment-title {  font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 20px; }
+.comment-body { color: #ffffff; font-size: 14.5px; line-height: 1.8; }
+.comment-body p { margin-bottom: 16px; }
+.comment-body p:last-child { margin-bottom: 0; }
+.comment-body strong { color: #5BB8D4; }
+
+.footer { border-top: 1px solid #DDE8F0; padding: 24px 0; text-align: center; font-size: 12px; color: #8FA8C0; }
+
+
+.compare-table th, .compare-table td { padding-left: 14px; padding-right: 14px; }
+.tot-col { font-weight: 700; background: rgba(91,184,212,0.06); }
+.obj { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #5B7A99; }
+.table-scroll { overflow-x: auto; }
+.note-info { padding: 12px 20px; font-size: 13px; color: #1A3A5C; background: #EEF6FB; border-bottom: 1px solid #D6E8F3; }
+@media (max-width: 620px) { .container { padding: 0 16px; } .compare-table { font-size: 13px; } }
+
+
+/* Font unico del report */
+*, *::before, *::after {  }
+
+/* FONT UNICO: Inter, nessuna eccezione */
+*, *::before, *::after { font-family: &#x27;Inter&#x27;, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, Arial, sans-serif !important; }
+.section-title, .narrative h4, .comment-title { font-weight: 800 !important; letter-spacing: -.015em; }
+.section-title { font-size: 26px !important; }
+.narrative h4 { font-size: 18px !important; }
+.comment-title { font-size: 24px !important; }
+
+/* TITOLI DI SEZIONE: identici in tutte le tab */
+.section-label, .sec-label, .comment-label {
+  font-size: 12px !important; letter-spacing: .18em !important; text-transform: uppercase !important;
+  font-weight: 700 !important; color: #0891B2 !important; margin: 0 0 6px !important;
+}
+.section-title, h2, .comment-title {
+  font-size: 26px !important; font-weight: 800 !important; letter-spacing: -.015em !important;
+  line-height: 1.2 !important; margin: 0 0 6px !important;
+}
+.section-title, h2 { color: #0A2540 !important; }
+.comment-title { color: #ffffff !important; margin-bottom: 20px !important; }
+.lede { font-size: 15px !important; margin: 0 0 24px !important; }
+.narrative h4, .reading h3 {
+  font-size: 13px !important; letter-spacing: .1em !important; text-transform: uppercase !important;
+  font-weight: 700 !important; color: #0891B2 !important; margin: 0 0 10px !important;
+}
+.campaign-name, .camp-name { font-size: 16px !important; font-weight: 700 !important; letter-spacing: -.01em !important; }
+section { padding: 44px 0 !important; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header class=&quot;report-header&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p class=&quot;eyebrow&quot;&gt;Report di Stagione · Meta Ads&lt;/p&gt;
+    &lt;h1&gt;Campagne AcquaPark · Report Meta&lt;/h1&gt;
+    &lt;p class=&quot;sub&quot;&gt;Stagione 2026: tutte le campagne AcquaPark, mese per mese&lt;/p&gt;
+    &lt;div class=&quot;chips&quot;&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Periodo&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;Maggio – Agosto 2026&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Investimento&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;€6.449,40&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Ricavo attribuito&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;€31.688,15&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;4,91&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;metaline&quot;&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Account&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;Acqua1Village&lt;/div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Campagne analizzate&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;6 campagne AcquaPark&lt;/div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Struttura&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;2 Vendite · 2 Lead · 1 Traffico · 1 Notorietà&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;div class=&quot;container&quot;&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;section-label&quot;&gt;Panoramica&lt;/div&gt;
+    &lt;div class=&quot;section-title&quot;&gt;Tutte le campagne AcquaPark della stagione&lt;/div&gt;
+    &lt;div class=&quot;campaign-block&quot;&gt;
+      &lt;div class=&quot;campaign-header&quot;&gt;&lt;span class=&quot;campaign-name&quot;&gt;6 campagne · maggio – agosto 2026&lt;/span&gt;&lt;span class=&quot;campaign-badge&quot;&gt;ROAS 4,91&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;table-scroll&quot;&gt;&lt;table class=&quot;compare-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Campagna&lt;/th&gt;&lt;th&gt;Spesa&lt;/th&gt;&lt;th&gt;Risultato&lt;/th&gt;&lt;th&gt;Ricavo attribuito&lt;/th&gt;&lt;th&gt;ROAS&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;FL – Sales – AP Ticket&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;Vendite&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€3.957,83&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;493 acquisti&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€20.978,47&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;5,30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;FL – Sales – AP Novità&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;Vendite&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€979,16&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;195 acquisti&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€9.198,58&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;9,39&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;FL – Bday AP 2026&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;Lead&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€968,94&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;90 registrazioni · 36 acquisti&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€1.433,64&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1,48&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;FL – Lead Gen. – AP Pre Sale 2026&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;Lead&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€351,10&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;Iscrizioni in verifica · 3 acquisti&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€77,46&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;0,22&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Traffic – AP Giornate Animazione&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;Traffico&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€96,86&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1.992 visite al profilo&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;–&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;–&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;FL – Awareness – AP&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;Notorietà&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€95,51&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;126.046 persone raggiunte&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;–&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;–&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;roas-row&quot;&gt;&lt;td class=&quot;metric-label&quot;&gt;&lt;strong&gt;Totale Meta&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;roas-val&quot;&gt;€6.449,40&lt;/td&gt;&lt;td class=&quot;roas-val&quot;&gt;727 acquisti&lt;/td&gt;&lt;td class=&quot;roas-val&quot;&gt;€31.688,15&lt;/td&gt;&lt;td class=&quot;roas-val&quot;&gt;4,91&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;narrative&quot;&gt;
+      &lt;h4&gt;Lettura della stagione&lt;/h4&gt;
+      &lt;p&gt;Su Meta abbiamo investito &lt;strong&gt;€6.449,40&lt;/strong&gt; generando &lt;strong&gt;727 acquisti&lt;/strong&gt; e &lt;strong&gt;€31.688,15&lt;/strong&gt; di ricavo attribuito. Il costo medio per acquisto è €8,87, lo scontrino medio €43,59.&lt;/p&gt;
+      &lt;p&gt;Il valore nasce quasi tutto dalle due campagne Vendite: &lt;strong&gt;€4.936,99&lt;/strong&gt; di spesa (77% del budget) per &lt;strong&gt;€30.177,05&lt;/strong&gt; di ricavo, pari al 95% del totale, con ROAS 6,11. Le campagne Lead, Traffico e Notorietà hanno obiettivi diversi dalla vendita diretta e vanno lette sui loro risultati: registrazioni, visite, persone raggiunte.&lt;/p&gt;
+      &lt;p&gt;Attribuzione: 7 giorni dal clic e 1 giorno dalla visualizzazione, come impostato nelle campagne.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;section-label&quot;&gt;Campagna 01 · Vendite&lt;/div&gt;
+    &lt;div class=&quot;section-title&quot;&gt;FL – Sales – AP Ticket&lt;/div&gt;
+    &lt;div class=&quot;campaign-block&quot;&gt;
+      &lt;div class=&quot;campaign-header&quot;&gt;&lt;span class=&quot;campaign-name&quot;&gt;FL – Sales – AP Ticket&lt;/span&gt;&lt;span class=&quot;campaign-badge&quot;&gt;ROAS 5,30&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;table-scroll&quot;&gt;&lt;table class=&quot;compare-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Metrica&lt;/th&gt;&lt;th&gt;Giugno&lt;/th&gt;&lt;th&gt;Luglio&lt;/th&gt;&lt;th&gt;Agosto&lt;/th&gt;&lt;th&gt;Stagione&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Spesa&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€1.137,83&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€1.648,08&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€1.171,92&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€3.957,83&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Impression&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;475.259&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;749.833&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;525.752&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;1.750.844&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Copertura&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;111.305&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;170.448&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;130.202&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;252.916&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Clic sul link&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;5.548&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;9.236&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;6.228&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;21.012&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;CTR link&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1,17%&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1,23%&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1,18%&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;1,20%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;CPM&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€2,39&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€2,20&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€2,23&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€2,26&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Checkout avviati&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;291&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;725&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;625&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;1.641&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Acquisti&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;118&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;203&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;172&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;493&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Checkout chiusi in acquisto&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;40,5%&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;28,0%&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;27,5%&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;30,0%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Costo per acquisto&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€9,64&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€8,12&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€6,81&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€8,03&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Ricavo attribuito&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€5.072,61&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€9.117,17&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€6.788,70&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€20.978,47&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;roas-row&quot;&gt;&lt;td class=&quot;metric-label&quot;&gt;&lt;strong&gt;ROAS&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;4,46&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;5,53&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;5,79&lt;/td&gt;&lt;td class=&quot;roas-val&quot;&gt;5,30&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;narrative&quot;&gt;&lt;h4&gt;Lettura della campagna&lt;/h4&gt;
+  &lt;p&gt;È il &lt;strong&gt;motore della stagione in volume&lt;/strong&gt;: 493 acquisti, due terzi di tutti quelli generati da Meta, con €3.957,83 di spesa e ROAS 5,30.&lt;/p&gt;
+  &lt;p&gt;Il rendimento &lt;strong&gt;migliora ogni mese&lt;/strong&gt;: ROAS da 4,46 a giugno a 5,53 a luglio e &lt;strong&gt;5,79 ad agosto&lt;/strong&gt;, mentre il costo per acquisto scende da €9,64 a &lt;strong&gt;€6,81&lt;/strong&gt;. Ad agosto, con il 29% di budget in meno rispetto a luglio, la campagna ha mantenuto l&#x27;85% degli acquisti.&lt;/p&gt;
+  &lt;p&gt;Il punto da migliorare è il passaggio finale: su 1.641 checkout avviati se ne chiude in acquisto il &lt;strong&gt;30%&lt;/strong&gt;, contro il 40% di giugno. È un dato che dipende dalla pagina di pagamento più che dagli annunci, e vale la pena verificarlo sulla biglietteria prima della prossima stagione.&lt;/p&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;section-label&quot;&gt;Campagna 02 · Vendite&lt;/div&gt;
+    &lt;div class=&quot;section-title&quot;&gt;FL – Sales – AP Novità&lt;/div&gt;
+    &lt;div class=&quot;campaign-block&quot;&gt;
+      &lt;div class=&quot;campaign-header&quot;&gt;&lt;span class=&quot;campaign-name&quot;&gt;FL – Sales – AP Novità&lt;/span&gt;&lt;span class=&quot;campaign-badge&quot;&gt;ROAS 9,39&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;table-scroll&quot;&gt;&lt;table class=&quot;compare-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Metrica&lt;/th&gt;&lt;th&gt;Giugno&lt;/th&gt;&lt;th&gt;Luglio&lt;/th&gt;&lt;th&gt;Agosto&lt;/th&gt;&lt;th&gt;Stagione&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Spesa&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€209,65&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€467,64&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€301,87&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€979,16&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Impression&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;79.914&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;214.177&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;128.046&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;422.137&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Copertura&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;25.799&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;46.489&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;31.111&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;69.760&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Clic sul link&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;878&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;2.112&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1.207&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;4.197&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;CTR link&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1,10%&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;0,99%&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;0,94%&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;0,99%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;CPM&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€2,62&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€2,18&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€2,36&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€2,32&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Checkout avviati&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;63&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;233&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;146&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;442&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Acquisti&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;27&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;92&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;76&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;195&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Checkout chiusi in acquisto&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;42,9%&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;39,5%&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;52,1%&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;44,1%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Costo per acquisto&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€7,76&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€5,08&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€3,97&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€5,02&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Ricavo attribuito&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€1.618,63&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€4.465,20&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€3.114,75&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€9.198,58&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;roas-row&quot;&gt;&lt;td class=&quot;metric-label&quot;&gt;&lt;strong&gt;ROAS&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;7,72&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;9,55&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;10,32&lt;/td&gt;&lt;td class=&quot;roas-val&quot;&gt;9,39&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;narrative&quot;&gt;&lt;h4&gt;Lettura della campagna&lt;/h4&gt;
+  &lt;p&gt;La &lt;strong&gt;campagna più efficiente della stagione&lt;/strong&gt;: lanciata il 16 giugno, ha chiuso con ROAS &lt;strong&gt;9,39&lt;/strong&gt;, 195 acquisti e costo per acquisto di €5,02, con lo scontrino medio più alto di tutto l&#x27;account (€47,17).&lt;/p&gt;
+  &lt;p&gt;Anche qui la crescita è costante: ROAS 7,72 a giugno, 9,55 a luglio e &lt;strong&gt;10,32 ad agosto&lt;/strong&gt;, con il costo per acquisto sceso a €3,97. Ad agosto più della metà dei checkout avviati si è chiusa in acquisto (52%).&lt;/p&gt;
+  &lt;p&gt;Il messaggio sulle novità del parco ha funzionato meglio della comunicazione generica sul biglietto. Con un quarto del budget di AP Ticket ha prodotto quasi metà del suo ricavo: è il format da cui ripartire nel 2027, verificando quanto regge con budget più alti.&lt;/p&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;section-label&quot;&gt;Campagna 03 · Lead&lt;/div&gt;
+    &lt;div class=&quot;section-title&quot;&gt;FL – Bday AP 2026&lt;/div&gt;
+    &lt;div class=&quot;campaign-block&quot;&gt;
+      &lt;div class=&quot;campaign-header&quot;&gt;&lt;span class=&quot;campaign-name&quot;&gt;FL – Bday AP 2026&lt;/span&gt;&lt;span class=&quot;campaign-badge&quot;&gt;90 registrazioni&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;table-scroll&quot;&gt;&lt;table class=&quot;compare-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Metrica&lt;/th&gt;&lt;th&gt;Maggio&lt;/th&gt;&lt;th&gt;Giugno&lt;/th&gt;&lt;th&gt;Luglio&lt;/th&gt;&lt;th&gt;Stagione&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Spesa&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€369,68&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€594,13&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€5,13&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€968,94&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Impression&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;113.390&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;182.508&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1.731&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;297.629&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Clic sul link&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;782&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1.493&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;10&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;2.285&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Registrazioni completate&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;35&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;54&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;90&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Costo per registrazione&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€10,56&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€11,00&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€5,13&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€10,77&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Acquisti&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;0&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;35&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;36&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Ricavo attribuito&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€0,00&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€1.284,66&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€148,98&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€1.433,64&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;narrative&quot;&gt;&lt;h4&gt;Lettura della campagna&lt;/h4&gt;
+  &lt;p&gt;Campagna di &lt;strong&gt;raccolta contatti per le feste di compleanno&lt;/strong&gt; al parco, attiva da metà maggio a inizio luglio. Ha portato &lt;strong&gt;90 registrazioni&lt;/strong&gt; a €10,77 l&#x27;una, concentrate tra maggio e giugno.&lt;/p&gt;
+  &lt;p&gt;Oltre alle registrazioni ha generato anche &lt;strong&gt;36 acquisti diretti&lt;/strong&gt; per €1.433,64: un risultato in più rispetto all&#x27;obiettivo della campagna, che non va confrontato con il ROAS delle campagne Vendite.&lt;/p&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;section-label&quot;&gt;Campagna 04 · Lead&lt;/div&gt;
+    &lt;div class=&quot;section-title&quot;&gt;FL – Lead Gen. – AP Pre Sale 2026&lt;/div&gt;
+    &lt;div class=&quot;campaign-block&quot;&gt;
+      &lt;div class=&quot;campaign-header&quot;&gt;&lt;span class=&quot;campaign-name&quot;&gt;FL – Lead Gen. – AP Pre Sale 2026&lt;/span&gt;&lt;span class=&quot;campaign-badge&quot;&gt;Pre-stagione&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;note-info&quot;&gt;Iscrizioni alla prevendita in verifica con i dati di raccolta contatti.&lt;/div&gt;&lt;div class=&quot;table-scroll&quot;&gt;&lt;table class=&quot;compare-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Metrica&lt;/th&gt;&lt;th&gt;Maggio&lt;/th&gt;&lt;th&gt;Giugno&lt;/th&gt;&lt;th&gt;Stagione&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Spesa&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€331,93&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€19,17&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€351,10&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Impression&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;89.617&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;5.598&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;95.215&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Clic sul link&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1.042&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;73&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;1.115&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Acquisti&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;2&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Ricavo attribuito&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€33,48&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€43,98&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€77,46&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;narrative&quot;&gt;&lt;h4&gt;Lettura della campagna&lt;/h4&gt;
+  &lt;p&gt;Campagna di pre-stagione per raccogliere iscritti alla prevendita, attiva tra il 18 maggio e i primi giorni di giugno. Il numero di iscrizioni raccolte è in verifica e verrà integrato nel report: il tracciamento di Meta non le ha registrate come conversioni.&lt;/p&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;section-label&quot;&gt;Campagna 05 · Notorietà&lt;/div&gt;
+    &lt;div class=&quot;section-title&quot;&gt;FL – Awareness – AP&lt;/div&gt;
+    &lt;div class=&quot;campaign-block&quot;&gt;
+      &lt;div class=&quot;campaign-header&quot;&gt;&lt;span class=&quot;campaign-name&quot;&gt;FL – Awareness – AP&lt;/span&gt;&lt;span class=&quot;campaign-badge&quot;&gt;126.046 persone&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;table-scroll&quot;&gt;&lt;table class=&quot;compare-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Metrica&lt;/th&gt;&lt;th&gt;Giugno&lt;/th&gt;&lt;th&gt;Luglio&lt;/th&gt;&lt;th&gt;Stagione&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Spesa&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€15,54&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€79,97&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€95,51&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Impression&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;30.599&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;165.343&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;195.942&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Persone raggiunte&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;28.597&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;112.431&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;126.046&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;CPM&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€0,51&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€0,48&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€0,49&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;narrative&quot;&gt;&lt;h4&gt;Lettura della campagna&lt;/h4&gt;
+  &lt;p&gt;Campagna di copertura a supporto delle vendite tra giugno e luglio: &lt;strong&gt;126.046 persone raggiunte&lt;/strong&gt; con €95,51, a un costo di €0,49 ogni 1.000 impression. Il valore di questa campagna è alimentare il pubblico che le campagne Vendite hanno poi convertito.&lt;/p&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;section-label&quot;&gt;Campagna 06 · Traffico&lt;/div&gt;
+    &lt;div class=&quot;section-title&quot;&gt;Traffic – AP Giornate Animazione&lt;/div&gt;
+    &lt;div class=&quot;campaign-block&quot;&gt;
+      &lt;div class=&quot;campaign-header&quot;&gt;&lt;span class=&quot;campaign-name&quot;&gt;Traffic – AP Giornate Animazione&lt;/span&gt;&lt;span class=&quot;campaign-badge&quot;&gt;1.992 visite&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;table-scroll&quot;&gt;&lt;table class=&quot;compare-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Metrica&lt;/th&gt;&lt;th&gt;Agosto&lt;/th&gt;&lt;th&gt;Stagione&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Spesa&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€96,86&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€96,86&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Impression&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;99.980&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;99.980&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Persone raggiunte&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;54.670&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;54.670&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Clic sul link&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1.174&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;1.174&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Visite al profilo&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;1.992&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;1.992&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;metric-label&quot;&gt;Costo per visita&lt;/td&gt;&lt;td class=&quot;week-b&quot;&gt;€0,05&lt;/td&gt;&lt;td class=&quot;tot-col&quot;&gt;€0,05&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;narrative&quot;&gt;&lt;h4&gt;Lettura della campagna&lt;/h4&gt;
+  &lt;p&gt;Promozione delle giornate di animazione ad agosto: &lt;strong&gt;1.992 visite al profilo&lt;/strong&gt; e 1.174 clic con meno di €100, a €0,05 per visita.&lt;/p&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;section-label&quot;&gt;Creative Performance&lt;/div&gt;
+    &lt;div class=&quot;section-title&quot;&gt;Le creatività della stagione&lt;/div&gt;
+    &lt;div class=&quot;narrative&quot; style=&quot;margin-bottom:20px&quot;&gt;
+      &lt;p&gt;Classifica sulle campagne Vendite, considerando solo gli annunci con almeno €200 di spesa nella stagione. I primi tre sono i più efficienti, il quarto e il quinto quelli che hanno portato più volume.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;creative-grid&quot;&gt;&lt;div class=&quot;creative-card top-card&quot;&gt;&lt;span class=&quot;creative-flag&quot;&gt;🏆 #1&lt;/span&gt;&lt;div class=&quot;creative-title&quot;&gt;27.07 AP Novità New 2&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;AP Novità&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;creative-stats&quot;&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;m-val hi&quot;&gt;13,80&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Acquisti&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;81&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Costo/acquisto&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€3,19&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;CTR&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;1,80%&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Spesa&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€258,55&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;creative-card&quot;&gt;&lt;span class=&quot;creative-flag-num&quot;&gt;#2&lt;/span&gt;&lt;div class=&quot;creative-title&quot;&gt;22.06 AP Sales – TOF V1&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;AP Ticket&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;creative-stats&quot;&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;m-val hi&quot;&gt;10,45&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Acquisti&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;57&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Costo/acquisto&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€5,42&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;CTR&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;1,89%&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Spesa&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€308,71&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;creative-card&quot;&gt;&lt;span class=&quot;creative-flag-num&quot;&gt;#3&lt;/span&gt;&lt;div class=&quot;creative-title&quot;&gt;16.06 AP Novità V1.1 – Split Vert.&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;AP Novità&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;creative-stats&quot;&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;m-val hi&quot;&gt;8,55&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Acquisti&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;34&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Costo/acquisto&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€6,55&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;CTR&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;2,54%&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Spesa&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€222,54&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;creative-card&quot;&gt;&lt;span class=&quot;creative-flag-num&quot;&gt;#4&lt;/span&gt;&lt;div class=&quot;creative-title&quot;&gt;25.06 AP Sales – Video TOF V2&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;AP Ticket&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;creative-stats&quot;&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;m-val hi&quot;&gt;6,55&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Acquisti&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;96&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Costo/acquisto&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€7,48&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;CTR&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;2,91%&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Spesa&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€717,92&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;creative-card&quot;&gt;&lt;span class=&quot;creative-flag-num&quot;&gt;#5&lt;/span&gt;&lt;div class=&quot;creative-title&quot;&gt;15.07 AP Sales – Video TOF V4 Copy 2&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;AP Ticket&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;creative-stats&quot;&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;m-val hi&quot;&gt;5,62&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Acquisti&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;158&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Costo/acquisto&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€7,70&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;CTR&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;2,03%&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Spesa&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€1.216,57&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;creative-card warn-card&quot;&gt;&lt;span class=&quot;creative-flag-warn&quot;&gt;⚠ Da valutare&lt;/span&gt;&lt;div class=&quot;creative-title&quot;&gt;22.07 AP Sales – UGC 1&lt;br&gt;&lt;span class=&quot;obj&quot;&gt;AP Ticket&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;creative-stats&quot;&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;m-val bad&quot;&gt;2,19&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Acquisti&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;16&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Costo/acquisto&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€16,43&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;CTR&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;2,50%&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;creative-stat&quot;&gt;&lt;span class=&quot;m-label&quot;&gt;Spesa&lt;/span&gt;&lt;span class=&quot;m-val&quot;&gt;€262,95&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;narrative&quot;&gt;
+      &lt;h4&gt;Cosa ci dicono le creatività&lt;/h4&gt;
+      &lt;p&gt;&lt;strong&gt;27.07 AP Novità New 2&lt;/strong&gt; è l&#x27;annuncio più efficiente dell&#x27;anno: 81 acquisti con €258 e ROAS 13,80. &lt;strong&gt;22.06 TOF V1&lt;/strong&gt;, segnalato come candidato da scalare già nel report di giugno, ha chiuso a ROAS 10,45.&lt;/p&gt;
+      &lt;p&gt;In volume la stagione si regge su due video: &lt;strong&gt;25.06 Video TOF V2&lt;/strong&gt; e &lt;strong&gt;15.07 Video TOF V4 Copy 2&lt;/strong&gt;, che insieme fanno 254 acquisti. Le creatività principali hanno avuto una vita utile di circa 3-4 settimane prima di calare, e la rotazione dell&#x27;11 agosto con il V5 Copy 3 (ROAS 6,75) ha tenuto alta la resa nel finale.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;22.07 UGC 1&lt;/strong&gt; ha attirato molti clic (CTR 2,50%) ma ha convertito poco: ROAS 2,19. Il formato UGC va ripensato prima di riproporlo.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;comment-box&quot;&gt;
+    &lt;div class=&quot;comment-label&quot;&gt;Note strategiche&lt;/div&gt;
+    &lt;div class=&quot;comment-title&quot;&gt;Considerazioni di fine stagione&lt;/div&gt;
+    &lt;div class=&quot;comment-body&quot;&gt;
+      &lt;p&gt;La stagione Meta chiude con &lt;strong&gt;€31.688,15&lt;/strong&gt; di ricavo attribuito su €6.449,40 investiti. Il dato più importante è la traiettoria: &lt;strong&gt;ogni mese le campagne Vendite hanno reso più del precedente&lt;/strong&gt;, grazie a interventi successivi su pubblico e creatività.&lt;/p&gt;
+      &lt;p&gt;A giugno AP Ticket era partita con fatica. Il rinnovo di pubblico e creatività deciso a fine giugno ha portato la campagna da ROAS 4,46 a 5,79 in due mesi. AP Novità ha dimostrato che un messaggio specifico sulle novità del parco converte meglio della comunicazione generica.&lt;/p&gt;
+      &lt;p&gt;Per il 2027 le leve sono tre: &lt;strong&gt;partire con il format Novità&lt;/strong&gt; fin dall&#x27;apertura delle vendite, &lt;strong&gt;pianificare una rotazione creativa ogni 3-4 settimane&lt;/strong&gt; e &lt;strong&gt;lavorare con la biglietteria sul checkout&lt;/strong&gt;: su AP Ticket il 70% di chi avvia l&#x27;acquisto non lo completa.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;Report generato da FitLeads per Acqua1Village · Stagione 2026. Dati estratti da Meta Ads Manager il 16/09/2026.&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Report Meta Ads" class="hidden" scrolling="no"></iframe>
+  <iframe id="frame-google" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;it&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Report Campagne AcquaPark · Stagione 2026 · Google Ads&lt;/title&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;
+  :root{
+    --ink:#0A2540; --muted:#5B6B7C; --bg:#EEF3F7; --card:#FFFFFF; --line:#E2E9F0;
+    --deep1:#0B3B5C; --deep2:#06283D; --aqua:#06B6D4; --aqua2:#0891B2; --teal:#14B8A6;
+    --pos:#15803D; --posbg:#E7F5EC; --neg:#C2410C; --negbg:#FBEBE2; --neutral:#334155;
+    --gold:#C99700; --gold-bg:#FBF3DA;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; 
+    color:var(--ink); background:var(--bg); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  a{color:var(--aqua2); text-decoration:none}
+
+  /* ---------- Header ---------- */
+  header{
+    background:
+      radial-gradient(1200px 400px at 85% -20%, rgba(6,182,212,.35), transparent 60%),
+      linear-gradient(135deg,var(--deep1),var(--deep2));
+    color:#fff; padding:52px 0 46px; position:relative; overflow:hidden;
+  }
+  header::after{
+    content:&quot;&quot;; position:absolute; left:0; right:0; bottom:0; height:5px;
+    background:linear-gradient(90deg,var(--aqua),var(--teal));
+  }
+  .eyebrow{
+    font-size:12px; letter-spacing:.22em; text-transform:uppercase; font-weight:600;
+    color:#8FD9EA; margin:0 0 14px;
+  }
+  header h1{font-size:38px; line-height:1.1; font-weight:800; margin:0 0 8px; letter-spacing:-.02em}
+  header .sub{color:#BcD3E4; color:#B9D2E3; font-size:16px; margin:0 0 26px; font-weight:500}
+  .chips{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px}
+  .chip{
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16);
+    border-radius:10px; padding:10px 14px; backdrop-filter:blur(4px);
+  }
+  .chip .k{display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#7FB9D2; font-weight:600}
+  .chip .v{font-size:15px; font-weight:700; color:#fff}
+  .metaline{display:flex; flex-wrap:wrap; gap:28px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14)}
+  .metaline .k{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#7FB9D2; font-weight:600; margin-bottom:2px}
+  .metaline .v{font-size:15px; font-weight:600; color:#EAF4FA}
+
+  /* ---------- Sections ---------- */
+  section{padding:44px 0}
+  .sec-label{
+    font-size:12px; letter-spacing:.18em; text-transform:uppercase; font-weight:700;
+    color:var(--aqua2); margin:0 0 6px;
+  }
+  h2{font-size:26px; font-weight:800; margin:0 0 4px; letter-spacing:-.015em}
+  .lede{color:var(--muted); margin:0 0 24px; font-size:15px}
+
+  .camp-head{display:flex; align-items:center; gap:12px; margin-bottom:18px; flex-wrap:wrap}
+  .camp-name{font-size:20px; font-weight:700;  letter-spacing:-.01em}
+  .badge{
+    font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--pos); background:var(--posbg); padding:4px 10px; border-radius:999px;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .badge::before{content:&quot;&quot;; width:7px; height:7px; border-radius:50%; background:var(--pos)}
+  .badge.paused{color:var(--neg); background:var(--negbg)}
+  .badge.paused::before{background:var(--neg)}
+
+  /* ---------- Table ---------- */
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    box-shadow:0 1px 2px rgba(10,37,64,.04), 0 8px 24px rgba(10,37,64,.05); overflow:hidden;
+  }
+  table{width:100%; border-collapse:collapse; font-size:15px}
+  thead th{
+    text-align:right; font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; padding:16px 20px; background:#F7FAFC;
+    border-bottom:1px solid var(--line);
+  }
+  thead th:first-child{text-align:left}
+  tbody td{padding:13px 20px; border-bottom:1px solid var(--line); text-align:right; font-variant-numeric:tabular-nums}
+  tbody td:first-child{text-align:left; color:var(--muted); font-weight:500}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:nth-child(even){background:#FBFDFE}
+  .val{font-weight:700; color:var(--ink)}
+  .valB{font-weight:800; color:var(--ink)}
+  .delta{font-weight:700; font-size:14px; white-space:nowrap}
+  .up{color:var(--pos)} .down{color:var(--neg)} .flat{color:var(--neutral)}
+  .hero-row td{background:#F2FBFC !important}
+  .hero-row td:first-child{color:var(--ink); font-weight:700}
+  .footnote{font-size:12.5px; color:var(--muted); margin-top:12px; font-style:italic}
+  .chart-card{padding:22px 22px 10px; margin-bottom:22px}
+  .chart-card svg{width:100%; height:auto; display:block}
+  .legend{display:flex; flex-wrap:wrap; gap:18px; margin-bottom:6px}
+  .legend-item{display:flex; align-items:center; gap:7px; font-size:13px; color:var(--muted); font-weight:600}
+  .legend-dot{width:10px; height:10px; border-radius:50%; display:inline-block}
+
+  /* ---------- Reading ---------- */
+  .reading{margin-top:22px}
+  .reading h3{
+    font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--aqua2);
+    font-weight:700; margin:0 0 10px;
+  }
+  .reading p{margin:0 0 12px; color:#2B3B4A; font-size:15.5px}
+  .reading p:last-child{margin-bottom:0}
+  .reading strong{color:var(--ink); font-weight:700}
+
+  /* ---------- Performance cards ---------- */
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  .pcard{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
+    box-shadow:0 8px 24px rgba(10,37,64,.05); position:relative; display:flex; flex-direction:column;
+  }
+  .pcard.top{border-color:#F0D98B; box-shadow:0 8px 28px rgba(201,151,0,.14)}
+  .pcard.paused{opacity:.82}
+  .rank{
+    display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700;
+    letter-spacing:.04em; text-transform:uppercase; color:var(--aqua2);
+    background:#E9F6FA; padding:5px 11px; border-radius:999px; align-self:flex-start; margin-bottom:14px;
+  }
+  .pcard.top .rank{color:var(--gold); background:var(--gold-bg)}
+  .pcard h4{font-size:16px; font-weight:700; margin:0 0 2px; letter-spacing:-.01em}
+  .pcard .grp-sub{font-size:13px; color:var(--muted); margin:0 0 16px}
+  .mini-table{width:100%; border-collapse:collapse; font-size:11.5px; margin-top:2px}
+  .mini-table th{text-align:right; color:var(--muted); font-weight:600; padding:5px 3px; border-bottom:1px solid var(--line); font-size:9.5px; text-transform:uppercase; letter-spacing:.02em}
+  .mini-table th:first-child{text-align:left}
+  .mini-table td{text-align:right; padding:6px 3px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums; font-weight:600; color:var(--ink)}
+  .mini-table td:first-child{text-align:left; color:var(--muted); font-weight:600}
+  .mini-table tr:last-child td{border-bottom:none}
+  .pcard .trend{margin-top:16px; padding-top:14px; border-top:1px solid var(--line); font-size:13.5px; color:#2B3B4A}
+  .pcard .trend b{color:var(--pos); font-weight:700}
+  .pcard.paused .trend b{color:var(--neg)}
+
+  /* ---------- Final notes ---------- */
+  .notes .card{padding:30px}
+  .notes p{margin:0 0 14px; font-size:15.5px; color:#2B3B4A}
+  .notes p:last-child{margin-bottom:0}
+  .notes strong{color:var(--ink)}
+  .steps{list-style:none; margin:22px 0 0; padding:20px 0 0; border-top:1px solid var(--line)}
+  .steps li{position:relative; padding-left:30px; margin-bottom:12px; font-size:15px; color:#2B3B4A}
+  .steps li:last-child{margin-bottom:0}
+  .steps li::before{
+    content:&quot;&quot;; position:absolute; left:0; top:8px; width:14px; height:14px; border-radius:4px;
+    background:linear-gradient(135deg,var(--aqua),var(--teal));
+  }
+  .steps b{color:var(--ink)}
+
+  /* ---------- Footer ---------- */
+  footer{padding:34px 0 48px; text-align:center; color:var(--muted); font-size:13px}
+  footer .rule{height:1px; background:var(--line); max-width:960px; margin:0 auto 24px}
+
+  @media (max-width:760px){
+    header{padding:40px 0 36px}
+    header h1{font-size:29px}
+    .cards{grid-template-columns:1fr}
+    section{padding:34px 0}
+    h2{font-size:22px}
+    thead th,tbody td{padding:11px 14px; font-size:14px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+  @media print{
+    body{background:#fff}
+    header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .card,.pcard{box-shadow:none}
+    section{padding:24px 0}
+  }
+
+
+header{text-align:center}
+header .chips, header .metaline{justify-content:center}
+.table-scroll{overflow-x:auto}
+.tot td{background:#F2FBFC !important; font-weight:800}
+.tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:3px 9px; border-radius:999px; background:#E9F6FA; color:var(--aqua2)}
+.tag.low{background:var(--negbg); color:var(--neg)}
+.tag.hi{background:var(--posbg); color:var(--pos)}
+.cards.two{grid-template-columns:repeat(3,1fr)}
+
+
+/* Font unico del report */
+*, *::before, *::after {  }
+
+/* FONT UNICO: Inter, nessuna eccezione */
+*, *::before, *::after { font-family: &#x27;Inter&#x27;, system-ui, -apple-system, &#x27;Segoe UI&#x27;, Roboto, Arial, sans-serif !important; }
+.section-title, .narrative h4, .comment-title { font-weight: 800 !important; letter-spacing: -.015em; }
+.section-title { font-size: 26px !important; }
+.narrative h4 { font-size: 18px !important; }
+.comment-title { font-size: 24px !important; }
+
+/* TITOLI DI SEZIONE: identici in tutte le tab */
+.section-label, .sec-label, .comment-label {
+  font-size: 12px !important; letter-spacing: .18em !important; text-transform: uppercase !important;
+  font-weight: 700 !important; color: #0891B2 !important; margin: 0 0 6px !important;
+}
+.section-title, h2, .comment-title {
+  font-size: 26px !important; font-weight: 800 !important; letter-spacing: -.015em !important;
+  line-height: 1.2 !important; margin: 0 0 6px !important;
+}
+.section-title, h2 { color: #0A2540 !important; }
+.comment-title { color: #ffffff !important; margin-bottom: 20px !important; }
+.lede { font-size: 15px !important; margin: 0 0 24px !important; }
+.narrative h4, .reading h3 {
+  font-size: 13px !important; letter-spacing: .1em !important; text-transform: uppercase !important;
+  font-weight: 700 !important; color: #0891B2 !important; margin: 0 0 10px !important;
+}
+.campaign-name, .camp-name { font-size: 16px !important; font-weight: 700 !important; letter-spacing: -.01em !important; }
+section { padding: 44px 0 !important; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;eyebrow&quot;&gt;Report di Stagione · Google Ads&lt;/p&gt;
+    &lt;h1&gt;Campagne AcquaPark · Report Google&lt;/h1&gt;
+    &lt;p class=&quot;sub&quot;&gt;Stagione 2026: andamento mensile e settimanale&lt;/p&gt;
+    &lt;div class=&quot;chips&quot;&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Periodo&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;15 Giugno – 19 Agosto 2026&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Investimento&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;€4.143,90&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;Valore conversioni&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;€34.034,45&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;chip&quot;&gt;&lt;span class=&quot;k&quot;&gt;ROAS&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;8,21x&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;metaline&quot;&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Account&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;Acqua1Village&lt;/div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Campagna analizzata&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;Search_Mix_AcquaPark&lt;/div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;div class=&quot;k&quot;&gt;Strategia&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;ROAS target 600%&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+&lt;section&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Campagna 01&lt;/p&gt;
+    &lt;h2&gt;Search_Mix_AcquaPark&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;Andamento mensile della stagione. Giugno parte dal 15, agosto si chiude il 19.&lt;/p&gt;
+    &lt;div class=&quot;camp-head&quot;&gt;&lt;span class=&quot;camp-name&quot;&gt;Search · Vendita biglietti online&lt;/span&gt;&lt;span class=&quot;badge paused&quot;&gt;Conclusa&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;card table-scroll&quot;&gt;&lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Metrica&lt;/th&gt;&lt;th&gt;Giugno&lt;/th&gt;&lt;th&gt;Luglio&lt;/th&gt;&lt;th&gt;Agosto&lt;/th&gt;&lt;th&gt;Stagione&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Spesa&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€830,65&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€2.092,63&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€1.220,62&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€4.143,90&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Impressioni&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;22.088&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;40.350&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;17.268&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;79.706&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Clic&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;5.860&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;12.028&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;7.274&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;25.162&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CTR&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;26,53%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;29,81%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;42,12%&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;31,57%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CPC medio&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€0,14&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€0,17&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€0,17&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€0,16&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tasso di conversione&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;2,23%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;3,10%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;3,52%&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;3,02%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acquisti&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;130&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;373&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;256&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;759&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Costo / acquisto&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€6,37&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€5,62&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4,77&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€5,46&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Valore conversioni&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€6.668,22&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€17.343,86&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€10.022,37&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;€34.034,45&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Quota impressioni&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;16,3%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;30,6%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;55,7%&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;–&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Quota persa per ranking&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;0,5%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;25,9%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;12,1%&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;–&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;hero-row&quot;&gt;&lt;td&gt;ROAS&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;8,03x&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;8,29x&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;8,21x&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;8,21x&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;p class=&quot;footnote&quot;&gt;Acquisti = conversioni di acquisto registrate da Google Ads, con valori frazionari dovuti al modello di attribuzione basato sui dati.&lt;/p&gt;
+    &lt;div class=&quot;reading&quot;&gt;
+      &lt;h3&gt;Lettura della stagione&lt;/h3&gt;
+      &lt;p&gt;La campagna ha chiuso con &lt;strong&gt;€4.143,90&lt;/strong&gt; di investimento, &lt;strong&gt;759 acquisti&lt;/strong&gt; e &lt;strong&gt;€34.034,45&lt;/strong&gt; di valore, per un ROAS di &lt;strong&gt;8,21x&lt;/strong&gt;, sopra il target del 600% impostato nella strategia.&lt;/p&gt;
+      &lt;p&gt;Il ROAS è rimasto &lt;strong&gt;sopra 8x in tutti e tre i mesi&lt;/strong&gt;, mentre la campagna diventava più efficiente: il costo per acquisto è sceso da €6,37 a &lt;strong&gt;€4,77&lt;/strong&gt; e il tasso di conversione è salito dal 2,23% al &lt;strong&gt;3,52%&lt;/strong&gt;. Nello stesso periodo la quota di impressioni è passata dal 16% al &lt;strong&gt;56%&lt;/strong&gt;: ad agosto gli annunci di Acqua1Village comparivano in più di una ricerca pertinente su due.&lt;/p&gt;
+      &lt;p&gt;Luglio è stato il mese di maggior investimento e valore (€17.344), ma anche quello con la competizione più alta: il 26% delle impressioni è andato perso per ranking, contro il 12% di agosto.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section style=&quot;background:linear-gradient(180deg,#E6EEF4,#EEF3F7)&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Andamento settimanale&lt;/p&gt;
+    &lt;h2&gt;Settimana per settimana&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;Le 10 settimane di attività della campagna. La prima e l&#x27;ultima sono parziali.&lt;/p&gt;
+    &lt;div class=&quot;card table-scroll&quot;&gt;&lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Settimana&lt;/th&gt;&lt;th&gt;Spesa&lt;/th&gt;&lt;th&gt;Acquisti&lt;/th&gt;&lt;th&gt;Valore&lt;/th&gt;&lt;th&gt;ROAS&lt;/th&gt;&lt;th&gt;Quota impr.&lt;/th&gt;&lt;th&gt;Persa ranking&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;15–21 giu&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€217,36&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;8,1&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€535,81&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag low&quot;&gt;2,47x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;11,6%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;0,6%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22–28 giu&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€513,24&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;111,7&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€5.440,47&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag hi&quot;&gt;10,60x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;24,9%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;0,2%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29 giu–5 lug&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€436,30&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;90,8&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4.565,89&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag hi&quot;&gt;10,47x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;27,9%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;8,2%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6–12 lug&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€480,43&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;79,8&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€3.713,72&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag &quot;&gt;7,73x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;21,3%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;19,5%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13–19 lug&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€459,00&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;87,0&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4.153,97&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag hi&quot;&gt;9,05x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;33,5%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;26,9%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20–26 lug&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€481,00&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;60,1&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€2.592,84&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag low&quot;&gt;5,39x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;34,0%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;43,5%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27 lug–2 ago&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€469,91&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;97,0&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4.071,42&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag &quot;&gt;8,66x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;45,5%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;35,4%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3–9 ago&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€466,77&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;85,1&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€3.682,77&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag &quot;&gt;7,89x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;55,4%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;8,2%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10–16 ago&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€457,89&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;120,1&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4.633,47&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag hi&quot;&gt;10,12x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;59,8%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;6,1%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17–19 ago&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€162,00&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;19,3&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€644,09&lt;/td&gt;&lt;td class=&quot;valB&quot;&gt;&lt;span class=&quot;tag low&quot;&gt;3,98x&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;62,3%&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;37,7%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;div class=&quot;reading&quot;&gt;
+      &lt;h3&gt;Lettura dell&#x27;andamento&lt;/h3&gt;
+      &lt;p&gt;Dopo la settimana di avvio, la campagna entra subito a regime: &lt;strong&gt;10,60x e 10,47x&lt;/strong&gt; nelle due settimane a cavallo tra giugno e luglio. A metà luglio la competizione in asta cresce e la quota di impressioni persa per ranking sale fino al &lt;strong&gt;43,55%&lt;/strong&gt; nella settimana del 20–26 luglio, la più debole della stagione (ROAS 5,39x), in coincidenza con la maggiore pressione di acquaticapark.it.&lt;/p&gt;
+      &lt;p&gt;Da fine luglio la situazione si ribalta: la quota persa per ranking scende sotto il 10% nelle prime due settimane di agosto e la settimana del 10–16 agosto chiude a &lt;strong&gt;10,12x con 120 acquisti&lt;/strong&gt;, il miglior risultato settimanale in volume. Gli ultimi tre giorni di attività (17–19 agosto) chiudono la stagione con volumi bassi.&lt;/p&gt;
+      &lt;p&gt;Nota sui valori: Google Ads attribuisce una parte delle conversioni con alcuni giorni di ritardo. Per questo il valore delle settimane di luglio oggi è più alto di quanto riportato nel report del 12 agosto, ad esempio €4.071 invece di €3.528 per la settimana 27 luglio–2 agosto.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Ad Group Performance&lt;/p&gt;
+    &lt;h2&gt;Andamento per gruppo di annunci&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;I 3 gruppi principali mese per mese. Il gruppo &quot;Automatico&quot; è rimasto attivo solo nei primi giorni (€31,63, nessun acquisto).&lt;/p&gt;
+    &lt;div class=&quot;cards&quot;&gt;&lt;div class=&quot;pcard top&quot;&gt;&lt;span class=&quot;rank&quot;&gt;🏆 #1&lt;/span&gt;&lt;h4&gt;Geo Localizzato&lt;/h4&gt;&lt;p class=&quot;grp-sub&quot;&gt;Ricerche per zona geografica · Attivo tutta la stagione&lt;/p&gt;
+      &lt;table class=&quot;mini-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;Giu&lt;/th&gt;&lt;th&gt;Lug&lt;/th&gt;&lt;th&gt;Ago&lt;/th&gt;&lt;th&gt;Tot.&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;ROAS&lt;/td&gt;&lt;td&gt;9,62x&lt;/td&gt;&lt;td&gt;9,06x&lt;/td&gt;&lt;td&gt;8,76x&lt;/td&gt;&lt;td&gt;9,06x&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Acquisti&lt;/td&gt;&lt;td&gt;87&lt;/td&gt;&lt;td&gt;280&lt;/td&gt;&lt;td&gt;205&lt;/td&gt;&lt;td&gt;573&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Costo&lt;/td&gt;&lt;td&gt;€466&lt;/td&gt;&lt;td&gt;€1.484&lt;/td&gt;&lt;td&gt;€909&lt;/td&gt;&lt;td&gt;€2.859&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+      &lt;div class=&quot;trend&quot;&gt;Motore della campagna: &lt;b&gt;75% degli acquisti&lt;/b&gt; e ROAS tra 8,8x e 9,6x in tutti i mesi.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;pcard&quot;&gt;&lt;span class=&quot;rank&quot;&gt;#2&lt;/span&gt;&lt;h4&gt;Brand + AcquaPark&lt;/h4&gt;&lt;p class=&quot;grp-sub&quot;&gt;Ricerche di marca · Attivo tutta la stagione&lt;/p&gt;
+      &lt;table class=&quot;mini-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;Giu&lt;/th&gt;&lt;th&gt;Lug&lt;/th&gt;&lt;th&gt;Ago&lt;/th&gt;&lt;th&gt;Tot.&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;ROAS&lt;/td&gt;&lt;td&gt;8,09x&lt;/td&gt;&lt;td&gt;7,40x&lt;/td&gt;&lt;td&gt;6,62x&lt;/td&gt;&lt;td&gt;7,28x&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Acquisti&lt;/td&gt;&lt;td&gt;29&lt;/td&gt;&lt;td&gt;84&lt;/td&gt;&lt;td&gt;51&lt;/td&gt;&lt;td&gt;164&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Costo&lt;/td&gt;&lt;td&gt;€186&lt;/td&gt;&lt;td&gt;€492&lt;/td&gt;&lt;td&gt;€312&lt;/td&gt;&lt;td&gt;€989&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+      &lt;div class=&quot;trend&quot;&gt;Solido e stabile in volume, con un ROAS che scende gradualmente da 8,08x a &lt;b&gt;6,62x&lt;/b&gt; a fine stagione.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;pcard paused&quot;&gt;&lt;span class=&quot;rank&quot;&gt;#3&lt;/span&gt;&lt;h4&gt;Acquisto Biglietti Generico&lt;/h4&gt;&lt;p class=&quot;grp-sub&quot;&gt;Ricerche generiche · In pausa dal 10/07&lt;/p&gt;
+      &lt;table class=&quot;mini-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;Giu&lt;/th&gt;&lt;th&gt;Lug&lt;/th&gt;&lt;th&gt;Ago&lt;/th&gt;&lt;th&gt;Tot.&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;ROAS&lt;/td&gt;&lt;td&gt;4,62x&lt;/td&gt;&lt;td&gt;2,20x&lt;/td&gt;&lt;td&gt;–&lt;/td&gt;&lt;td&gt;3,55x&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Acquisti&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;–&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Costo&lt;/td&gt;&lt;td&gt;€147&lt;/td&gt;&lt;td&gt;€117&lt;/td&gt;&lt;td&gt;–&lt;/td&gt;&lt;td&gt;€264&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+      &lt;div class=&quot;trend&quot;&gt;ROAS in calo a 2,20x a luglio: &lt;b&gt;messo in pausa il 10/07&lt;/b&gt; per spostare budget su Geo e Brand.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section style=&quot;background:linear-gradient(180deg,#E6EEF4,#EEF3F7)&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Termini di ricerca&lt;/p&gt;
+    &lt;h2&gt;Cosa cercavano le persone che hanno comprato&lt;/h2&gt;
+    &lt;p class=&quot;lede&quot;&gt;Le 10 ricerche con più acquisti nella stagione.&lt;/p&gt;
+    &lt;div class=&quot;card table-scroll&quot;&gt;&lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Ricerca&lt;/th&gt;&lt;th&gt;Costo&lt;/th&gt;&lt;th&gt;Acquisti&lt;/th&gt;&lt;th&gt;Costo / acquisto&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;piscina castano primo&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€794,63&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;193,2&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4,11&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;acquapark castano primo&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€590,94&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;131,7&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€4,49&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;acqua park castano primo&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€405,68&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;80,8&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€5,02&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;castano primo piscina&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€195,15&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;51,4&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€3,80&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;acqua village castano&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€84,20&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;23,5&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€3,58&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;acqua village castano primo&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€159,61&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;22,3&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€7,16&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;piscina castano&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€64,13&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;19,7&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€3,25&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;acquavillage castano primo&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€58,78&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;15,9&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€3,70&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;castano piscina&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€37,38&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;13,3&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€2,80&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;castano primo acquapark&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€78,65&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;13,3&lt;/td&gt;&lt;td class=&quot;val&quot;&gt;€5,91&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;div class=&quot;reading&quot;&gt;
+      &lt;h3&gt;Lettura&lt;/h3&gt;
+      &lt;p&gt;Le prime 10 ricerche generano &lt;strong&gt;quasi l&#x27;80% degli acquisti&lt;/strong&gt; attribuiti ai termini di ricerca e sono quasi tutte ricerche del parco o della località: &quot;piscina castano primo&quot;, &quot;acquapark castano primo&quot;, &quot;acqua village&quot;. Google ha intercettato con grande efficienza chi stava già cercando AcquaPark, con un costo per acquisto tra €2,80 e €7,20.&lt;/p&gt;
+      &lt;p&gt;Le ricerche generiche (&quot;acquapark milano&quot;, &quot;biglietti&quot;, &quot;prezzi&quot;) e quelle con i nomi di altri parchi (Aquaneva, Ondaland, Ondasplash, Acquatica) hanno portato pochi o nessun acquisto. Nella stagione circa &lt;strong&gt;€440&lt;/strong&gt; sono andati su ricerche senza conversioni: una lista di esclusioni pronta dal primo giorno li recupera nel 2027.&lt;/p&gt;
+      &lt;p&gt;Per questo Google e Meta lavorano in modo complementare: Meta crea la domanda raggiungendo chi non conosce ancora il parco, Google la raccoglie quando la persona lo cerca.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;notes&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p class=&quot;sec-label&quot;&gt;Note strategiche&lt;/p&gt;
+    &lt;h2&gt;Considerazioni di fine stagione&lt;/h2&gt;
+    &lt;div class=&quot;card&quot; style=&quot;margin-top:18px&quot;&gt;
+      &lt;p&gt;La campagna Search chiude la stagione con &lt;strong&gt;ROAS 8,21x&lt;/strong&gt; e €34.034,45 di valore su €4.143,90 investiti. La strategia ROAS target ha tenuto la resa mensile sopra l&#x27;obiettivo in tutti e tre i mesi.&lt;/p&gt;
+      &lt;p&gt;Le due decisioni che hanno pesato di più: la &lt;strong&gt;pausa del gruppo Generico il 10 luglio&lt;/strong&gt;, che ha concentrato il budget sui gruppi con ROAS sopra 7x, e la scelta, confermata nel report del 12 agosto, di &lt;strong&gt;mantenere la strategia tROAS&lt;/strong&gt; anche dopo la settimana più debole. Ad agosto la quota impressioni è salita fino al 60% con il costo per acquisto più basso della stagione.&lt;/p&gt;
+      &lt;ul class=&quot;steps&quot;&gt;
+        &lt;li&gt;&lt;b&gt;Avviare la campagna insieme a Meta&lt;/b&gt; dall&#x27;apertura delle vendite: a giugno Google ha reso 8x fin dalla seconda settimana.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;Caricare subito le esclusioni&lt;/b&gt; di ricerche generiche e nomi di altri parchi.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;Concentrare il budget su Geo Localizzato e Brand&lt;/b&gt;, i due gruppi che hanno generato il 97% degli acquisti.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;Monitorare acquaticapark.it da metà luglio&lt;/b&gt;, il periodo in cui la competizione in asta è stata più forte.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;&lt;footer&gt;&lt;div class=&quot;rule&quot;&gt;&lt;/div&gt;Report Google Ads per Acqua1Village · Stagione 2026. Dati estratti da Google Ads il 16/09/2026.&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Report Google Ads" class="hidden" scrolling="no"></iframe>
 </div>
 
 <script>
 (function () {
-  var frames = { meta: document.getElementById('frame-meta'), google: document.getElementById('frame-google') };
-  var chips  = { meta: document.getElementById('chip-meta'),  google: document.getElementById('chip-google') };
+  var frames = { tot: document.getElementById('frame-tot'), meta: document.getElementById('frame-meta'), google: document.getElementById('frame-google') };
+  var chips  = { tot: document.getElementById('chip-tot'), meta: document.getElementById('chip-meta'),  google: document.getElementById('chip-google') };
 
   function fit(f) {
     try {
@@ -69,7 +1035,7 @@ iframe.hidden { display: none; }
       chips[k].classList.toggle('active', on);
       if (on) { fit(frames[k]); }
     });
-    try { localStorage.setItem('ap_report_tab', target); } catch (e) {}
+    try { localStorage.setItem('ap_season_tab', target); } catch (e) {}
     window.scrollTo(0, 0);
   }
 
@@ -85,9 +1051,9 @@ iframe.hidden { display: none; }
   });
 
   // restore last selected tab
-  var saved = 'meta';
-  try { saved = localStorage.getItem('ap_report_tab') || 'meta'; } catch (e) {}
-  if (saved !== 'meta' && saved !== 'google') { saved = 'meta'; }
+  var saved = 'tot';
+  try { saved = localStorage.getItem('ap_season_tab') || 'tot'; } catch (e) {}
+  if (['tot','meta','google'].indexOf(saved) < 0) { saved = 'tot'; }
   show(saved);
 })();
 </script>
